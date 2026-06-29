@@ -1,0 +1,901 @@
+Line No.,Zone,Shift,Designation,Operator ID,Operator Name,Status,Operation,Machine Type,Eff,No. of days worked in the operation.
+Line-1,C,Night,Helper,OP1001,Operator_1001,Active,SNAP BUTTON ATTACH,Overlock,76.65,52
+Line-1,B,Day,Helper,OP1001,Operator_1001,Active,PRESSING,Overlock,72.17,149
+Line-1,C,Night,Helper,OP1001,Operator_1001,Active,HELPER,Flatbed,71.54,54
+Line-1,C,Night,Helper,OP1001,Operator_1001,Active,BACK PART PICKING,Overlock,88.21,147
+Line-1,B,Day,Helper,OP1001,Operator_1001,Active,BOTTOM BINDING,Flatbed,80.42,82
+Line-1,B,Night,Helper,OP1001,Operator_1001,Active,TACK - BTK,Lockstitch,88.04,69
+Line-1,C,Day,Helper,OP1002,Operator_1002,Active,TOP STITCH NECK,Overlock,75.02,118
+Line-1,C,Night,Helper,OP1002,Operator_1002,Active,ARM HOLE TACKING,Flatbed,70.58,119
+Line-1,A,Night,Helper,OP1002,Operator_1002,Active,SLEEVE ATTACH,Overlock,85.89,138
+Line-1,C,Day,Helper,OP1002,Operator_1002,Active,1ST SIDESEAM,Lockstitch,94.65,147
+Line-1,A,Night,Helper,OP1002,Operator_1002,Active,COLLAR ATTACH,Flatbed,92.95,52
+Line-1,C,Day,Helper,OP1002,Operator_1002,Active,HELPER,Overlock,81.04,105
+Line-1,A,Day,Helper,OP1003,Operator_1003,Active,LABEL ATTACH,Overlock,83.06,106
+Line-1,A,Night,Helper,OP1003,Operator_1003,Active,SLEEVE ATTACH,Flatbed,88.26,117
+Line-1,A,Day,Helper,OP1003,Operator_1003,Active,POCKET ATTACH,Overlock,88.82,143
+Line-1,A,Day,Helper,OP1003,Operator_1003,Active,FRONT PART PICKING,Flatbed,82.27,87
+Line-1,B,Night,Helper,OP1003,Operator_1003,Active,COLLAR ATTACH,Overlock,84.07,99
+Line-1,C,Night,Helper,OP1003,Operator_1003,Active,BACK PART PICKING,Overlock,88.71,129
+Line-1,C,Day,Supervisor,OP1004,Operator_1004,Active,BACK PART PICKING,Overlock,80.22,96
+Line-1,A,Night,Supervisor,OP1004,Operator_1004,Active,HELPER,Flatbed,92.92,78
+Line-1,B,Night,Supervisor,OP1004,Operator_1004,Active,1ST SIDESEAM,Lockstitch,83.04,80
+Line-1,C,Day,Supervisor,OP1004,Operator_1004,Active,SLEEVE NOTCH,Overlock,72.4,150
+Line-1,C,Day,Supervisor,OP1004,Operator_1004,Active,QUALITY CHECK,Overlock,80.22,130
+Line-1,B,Night,Supervisor,OP1004,Operator_1004,Active,2ND SIDESEAM WITH LABEL,Flatbed,79.25,72
+Line-1,B,Night,Operator,OP1005,Operator_1005,Active,FRONT PART PICKING,Lockstitch,72.17,92
+Line-1,C,Day,Operator,OP1005,Operator_1005,Active,PRESSING,Flatbed,75.21,61
+Line-1,A,Day,Operator,OP1005,Operator_1005,Active,HEATSEAL,Flatbed,91.2,66
+Line-1,B,Day,Operator,OP1005,Operator_1005,Active,ARM HOLE TACKING,Overlock,80.71,97
+Line-1,C,Night,Operator,OP1005,Operator_1005,Active,2ND SIDESEAM WITH LABEL,Lockstitch,75.16,91
+Line-1,A,Night,Operator,OP1005,Operator_1005,Active,PRE/DART OL,Flatbed,80.5,123
+Line-1,A,Night,Helper,OP1006,Operator_1006,Active,BOTTOM BINDING,Flatbed,77.22,101
+Line-1,C,Night,Helper,OP1006,Operator_1006,Active,HELPER,Overlock,88.37,105
+Line-1,B,Night,Helper,OP1006,Operator_1006,Active,FRONT PART PICKING,Lockstitch,88.9,110
+Line-1,C,Night,Helper,OP1006,Operator_1006,Active,SNAP BUTTON ATTACH,Overlock,91.5,126
+Line-1,C,Night,Helper,OP1006,Operator_1006,Active,QUALITY CHECK,Flatbed,70.11,117
+Line-1,A,Day,Helper,OP1006,Operator_1006,Active,TACK - BTK,Lockstitch,73.0,131
+Line-1,A,Day,Helper,OP1007,Operator_1007,Active,BACK PART PICKING,Flatbed,84.47,95
+Line-1,B,Night,Helper,OP1007,Operator_1007,Active,SHOULDER TAPE,Flatbed,80.27,108
+Line-1,C,Night,Helper,OP1007,Operator_1007,Active,SIDE SEAM JOINING,Lockstitch,73.21,128
+Line-1,A,Day,Helper,OP1007,Operator_1007,Active,PRE/DART OL,Flatbed,89.61,96
+Line-1,C,Day,Helper,OP1007,Operator_1007,Active,QUALITY CHECK,Overlock,90.14,149
+Line-1,A,Night,Helper,OP1007,Operator_1007,Active,HEATSEAL,Flatbed,81.21,126
+Line-1,A,Night,Operator,OP1008,Operator_1008,Active,SHOULDER JOINING,Flatbed,82.28,68
+Line-1,B,Day,Operator,OP1008,Operator_1008,Active,PRE/DART OL,Lockstitch,73.56,143
+Line-1,C,Night,Operator,OP1008,Operator_1008,Active,SIDE SEAM JOINING,Flatbed,84.75,142
+Line-1,A,Day,Operator,OP1008,Operator_1008,Active,BACK PART PICKING,Overlock,82.04,143
+Line-1,C,Day,Operator,OP1008,Operator_1008,Active,TROUSER FRONT JOINING,Overlock,93.85,63
+Line-1,A,Day,Operator,OP1008,Operator_1008,Active,SLEEVE ATTACH,Flatbed,80.75,80
+Line-1,B,Night,Supervisor,OP1009,Operator_1009,Active,SIDE SEAM JOINING,Lockstitch,92.92,71
+Line-1,A,Day,Supervisor,OP1009,Operator_1009,Active,PACKING,Lockstitch,78.76,95
+Line-1,C,Night,Supervisor,OP1009,Operator_1009,Active,ARM HOLE TACKING,Flatbed,79.22,62
+Line-1,B,Day,Supervisor,OP1009,Operator_1009,Active,SLEEVE ATTACH,Overlock,94.17,51
+Line-1,C,Night,Supervisor,OP1009,Operator_1009,Active,HEATSEAL,Overlock,83.49,90
+Line-1,B,Night,Supervisor,OP1009,Operator_1009,Active,SNAP BUTTON ATTACH,Lockstitch,92.44,77
+Line-1,C,Day,Operator,OP1010,Operator_1010,Active,SHOULDER TAPE,Lockstitch,81.04,51
+Line-1,A,Day,Operator,OP1010,Operator_1010,Active,COLLAR ATTACH,Flatbed,91.97,131
+Line-1,B,Day,Operator,OP1010,Operator_1010,Active,BACK PART PICKING,Overlock,82.04,123
+Line-1,B,Night,Operator,OP1010,Operator_1010,Active,TAPE ATTACH,Overlock,80.51,146
+Line-1,B,Night,Operator,OP1010,Operator_1010,Active,SLEEVE ATTACH,Lockstitch,81.97,136
+Line-1,C,Night,Operator,OP1010,Operator_1010,Active,PRE/DART OL,Overlock,72.71,67
+Line-1,A,Night,Supervisor,OP1011,Operator_1011,Active,NECK BINDING,Lockstitch,81.2,116
+Line-1,B,Day,Supervisor,OP1011,Operator_1011,Active,SLEEVE NOTCH,Lockstitch,81.74,65
+Line-1,C,Day,Supervisor,OP1011,Operator_1011,Active,SHOULDER TAPE,Overlock,80.51,64
+Line-1,A,Night,Supervisor,OP1011,Operator_1011,Active,TACK - BTK,Lockstitch,74.81,56
+Line-1,B,Night,Supervisor,OP1011,Operator_1011,Active,BACK PART PICKING,Lockstitch,91.7,147
+Line-1,B,Day,Supervisor,OP1011,Operator_1011,Active,POCKET ATTACH,Lockstitch,87.03,90
+Line-1,A,Night,Operator,OP1012,Operator_1012,Active,PRESSING,Lockstitch,78.89,146
+Line-1,C,Night,Operator,OP1012,Operator_1012,Active,SHOULDER JOINING,Lockstitch,82.5,76
+Line-1,A,Night,Operator,OP1012,Operator_1012,Active,SNAP BUTTON ATTACH,Flatbed,84.57,116
+Line-1,C,Night,Operator,OP1012,Operator_1012,Active,LABEL ATTACH,Overlock,85.69,138
+Line-1,A,Day,Operator,OP1012,Operator_1012,Active,SLEEVE HEM,Overlock,78.65,100
+Line-1,C,Day,Operator,OP1012,Operator_1012,Active,PRE/DART OL,Overlock,90.89,51
+Line-1,A,Day,Operator,OP1013,Operator_1013,Active,PACKING,Flatbed,92.93,149
+Line-1,B,Day,Operator,OP1013,Operator_1013,Active,SNAP BUTTON ATTACH,Overlock,85.95,58
+Line-1,C,Day,Operator,OP1013,Operator_1013,Active,QUALITY CHECK,Flatbed,92.83,80
+Line-1,A,Day,Operator,OP1013,Operator_1013,Active,HELPER,Flatbed,72.61,73
+Line-1,C,Night,Operator,OP1013,Operator_1013,Active,WAISTBAND ATTACH,Lockstitch,73.54,141
+Line-1,C,Night,Operator,OP1013,Operator_1013,Active,NECK BINDING,Flatbed,73.11,121
+Line-1,C,Night,Helper,OP1014,Operator_1014,Active,TROUSER BACK JOINING,Lockstitch,71.5,50
+Line-1,A,Day,Helper,OP1014,Operator_1014,Active,SIDE SEAM JOINING,Lockstitch,92.12,136
+Line-1,C,Night,Helper,OP1014,Operator_1014,Active,PRE/DART OL,Lockstitch,83.64,95
+Line-1,B,Day,Helper,OP1014,Operator_1014,Active,PRESSING,Overlock,74.85,137
+Line-1,C,Night,Helper,OP1014,Operator_1014,Active,SLEEVE NOTCH,Overlock,73.6,110
+Line-1,C,Day,Helper,OP1014,Operator_1014,Active,SLEEVE ATTACH,Lockstitch,74.31,140
+Line-1,C,Night,Helper,OP1015,Operator_1015,Active,TAPE ATTACH,Lockstitch,77.05,68
+Line-1,A,Day,Helper,OP1015,Operator_1015,Active,LABEL ATTACH,Flatbed,71.16,91
+Line-1,C,Night,Helper,OP1015,Operator_1015,Active,WAISTBAND ATTACH,Overlock,85.49,83
+Line-1,B,Night,Helper,OP1015,Operator_1015,Active,ARM HOLE TACKING,Lockstitch,80.38,69
+Line-1,B,Night,Helper,OP1015,Operator_1015,Active,SIDE SEAM JOINING,Overlock,78.34,133
+Line-1,A,Night,Helper,OP1015,Operator_1015,Active,PRE/DART OL,Flatbed,71.17,104
+Line-1,B,Day,Operator,OP1016,Operator_1016,Active,ARM HOLE TACKING,Lockstitch,78.67,138
+Line-1,C,Day,Operator,OP1016,Operator_1016,Active,HEATSEAL,Overlock,90.91,66
+Line-1,B,Night,Operator,OP1016,Operator_1016,Active,POCKET ATTACH,Overlock,86.64,139
+Line-1,C,Day,Operator,OP1016,Operator_1016,Active,SLEEVE NOTCH,Flatbed,79.41,133
+Line-1,C,Night,Operator,OP1016,Operator_1016,Active,2ND SIDESEAM WITH LABEL,Overlock,83.73,93
+Line-1,C,Day,Operator,OP1016,Operator_1016,Active,PRESSING,Overlock,88.11,102
+Line-1,A,Night,Operator,OP1017,Operator_1017,Active,PRE/DART OL,Lockstitch,93.0,114
+Line-1,C,Day,Operator,OP1017,Operator_1017,Active,SLEEVE ATTACH,Flatbed,92.59,91
+Line-1,A,Night,Operator,OP1017,Operator_1017,Active,SHOULDER TAPE,Lockstitch,77.33,61
+Line-1,C,Night,Operator,OP1017,Operator_1017,Active,QUALITY CHECK,Lockstitch,73.85,50
+Line-1,C,Night,Operator,OP1017,Operator_1017,Active,TOP STITCH NECK,Lockstitch,79.45,91
+Line-1,C,Night,Operator,OP1017,Operator_1017,Active,HELPER,Lockstitch,82.2,135
+Line-1,A,Night,Operator,OP1018,Operator_1018,Active,PACKING,Flatbed,86.49,94
+Line-1,C,Night,Operator,OP1018,Operator_1018,Active,NECK BINDING,Lockstitch,70.74,111
+Line-1,B,Night,Operator,OP1018,Operator_1018,Active,HELPER,Flatbed,90.54,89
+Line-1,A,Night,Operator,OP1018,Operator_1018,Active,TOP STITCH NECK,Overlock,75.79,144
+Line-1,B,Day,Operator,OP1018,Operator_1018,Active,BOTTOM HEMMING,Overlock,76.32,95
+Line-1,A,Day,Operator,OP1018,Operator_1018,Active,FRONT PART PICKING,Lockstitch,79.13,102
+Line-1,C,Day,Helper,OP1019,Operator_1019,Active,TAPE ATTACH,Flatbed,70.24,77
+Line-1,A,Night,Helper,OP1019,Operator_1019,Active,1ST SIDESEAM,Flatbed,71.46,138
+Line-1,A,Day,Helper,OP1019,Operator_1019,Active,BOTTOM HEMMING,Lockstitch,73.88,69
+Line-1,B,Day,Helper,OP1019,Operator_1019,Active,COLLAR ATTACH,Flatbed,88.64,64
+Line-1,A,Day,Helper,OP1019,Operator_1019,Active,SLEEVE HEM,Flatbed,84.0,127
+Line-1,A,Night,Helper,OP1019,Operator_1019,Active,TACK - BTK,Lockstitch,90.32,141
+Line-1,A,Night,Operator,OP1020,Operator_1020,Active,SNAP BUTTON ATTACH,Flatbed,82.69,113
+Line-1,B,Day,Operator,OP1020,Operator_1020,Active,TAPE ATTACH,Lockstitch,84.35,55
+Line-1,C,Night,Operator,OP1020,Operator_1020,Active,PRE/DART OL,Overlock,83.2,116
+Line-1,A,Day,Operator,OP1020,Operator_1020,Active,LABEL ATTACH,Lockstitch,74.45,53
+Line-1,A,Day,Operator,OP1020,Operator_1020,Active,TROUSER BACK JOINING,Overlock,88.37,73
+Line-1,C,Day,Operator,OP1020,Operator_1020,Active,1ST SIDESEAM,Flatbed,84.19,108
+Line-1,C,Day,Helper,OP1021,Operator_1021,Active,BACK PART PICKING,Lockstitch,89.39,131
+Line-1,A,Day,Helper,OP1021,Operator_1021,Active,LABEL ATTACH,Flatbed,79.04,150
+Line-1,A,Day,Helper,OP1021,Operator_1021,Active,NECK BINDING,Lockstitch,83.53,60
+Line-1,A,Day,Helper,OP1021,Operator_1021,Active,TOP STITCH NECK,Overlock,87.86,115
+Line-1,B,Night,Helper,OP1021,Operator_1021,Active,SHOULDER JOINING,Flatbed,94.19,50
+Line-1,C,Night,Helper,OP1021,Operator_1021,Active,SIDE SEAM JOINING,Overlock,87.01,119
+Line-1,C,Night,Helper,OP1022,Operator_1022,Active,SLEEVE NOTCH,Lockstitch,81.79,96
+Line-1,C,Day,Helper,OP1022,Operator_1022,Active,LABEL ATTACH,Lockstitch,86.73,57
+Line-1,B,Night,Helper,OP1022,Operator_1022,Active,2ND SIDESEAM WITH LABEL,Overlock,70.09,93
+Line-1,A,Night,Helper,OP1022,Operator_1022,Active,HEATSEAL,Lockstitch,94.29,112
+Line-1,A,Day,Helper,OP1022,Operator_1022,Active,SIDE SEAM JOINING,Overlock,76.28,68
+Line-1,C,Day,Helper,OP1022,Operator_1022,Active,ARM HOLE TACKING,Overlock,78.31,147
+Line-1,B,Night,Operator,OP1023,Operator_1023,Active,QUALITY CHECK,Overlock,74.42,82
+Line-1,C,Night,Operator,OP1023,Operator_1023,Active,COLLAR ATTACH,Overlock,92.21,138
+Line-1,B,Day,Operator,OP1023,Operator_1023,Active,1ST SIDESEAM,Flatbed,85.12,64
+Line-1,B,Night,Operator,OP1023,Operator_1023,Active,PRESSING,Overlock,88.75,111
+Line-1,C,Night,Operator,OP1023,Operator_1023,Active,HELPER,Overlock,72.89,106
+Line-1,C,Night,Operator,OP1023,Operator_1023,Active,BACK PART PICKING,Overlock,90.08,138
+Line-1,B,Night,Supervisor,OP1024,Operator_1024,Active,ARM HOLE TACKING,Lockstitch,88.28,77
+Line-1,C,Day,Supervisor,OP1024,Operator_1024,Active,PACKING,Overlock,79.36,56
+Line-1,C,Night,Supervisor,OP1024,Operator_1024,Active,2ND SIDESEAM WITH LABEL,Overlock,72.71,139
+Line-1,A,Day,Supervisor,OP1024,Operator_1024,Active,POCKET ATTACH,Flatbed,79.76,118
+Line-1,A,Night,Supervisor,OP1024,Operator_1024,Active,TROUSER FRONT JOINING,Lockstitch,76.52,73
+Line-1,B,Day,Supervisor,OP1024,Operator_1024,Active,HEATSEAL,Overlock,78.65,76
+Line-1,C,Night,Helper,OP1025,Operator_1025,Active,ARM HOLE TACKING,Flatbed,90.49,118
+Line-1,C,Day,Helper,OP1025,Operator_1025,Active,LABEL ATTACH,Overlock,72.3,134
+Line-1,B,Night,Helper,OP1025,Operator_1025,Active,HEATSEAL,Lockstitch,74.42,119
+Line-1,C,Day,Helper,OP1025,Operator_1025,Active,TROUSER FRONT JOINING,Flatbed,70.64,76
+Line-1,B,Day,Helper,OP1025,Operator_1025,Active,PRE/DART OL,Overlock,71.04,79
+Line-1,B,Night,Helper,OP1025,Operator_1025,Active,2ND SIDESEAM WITH LABEL,Lockstitch,85.68,84
+Line-1,A,Night,Supervisor,OP1026,Operator_1026,Active,TOP STITCH NECK,Lockstitch,88.48,140
+Line-1,C,Night,Supervisor,OP1026,Operator_1026,Active,PACKING,Lockstitch,75.08,128
+Line-1,A,Day,Supervisor,OP1026,Operator_1026,Active,PRESSING,Lockstitch,90.8,58
+Line-1,C,Day,Supervisor,OP1026,Operator_1026,Active,FRONT PART PICKING,Flatbed,73.9,76
+Line-1,B,Day,Supervisor,OP1026,Operator_1026,Active,SLEEVE ATTACH,Lockstitch,71.3,54
+Line-1,C,Night,Supervisor,OP1026,Operator_1026,Active,SLEEVE NOTCH,Flatbed,89.56,68
+Line-1,C,Day,Helper,OP1027,Operator_1027,Active,TROUSER BACK JOINING,Lockstitch,77.74,53
+Line-1,B,Night,Helper,OP1027,Operator_1027,Active,ARM HOLE TACKING,Overlock,82.01,105
+Line-1,A,Day,Helper,OP1027,Operator_1027,Active,SLEEVE ATTACH,Overlock,73.69,72
+Line-1,C,Night,Helper,OP1027,Operator_1027,Active,2ND SIDESEAM WITH LABEL,Overlock,78.22,99
+Line-1,A,Day,Helper,OP1027,Operator_1027,Active,HELPER,Overlock,78.41,113
+Line-1,C,Day,Helper,OP1027,Operator_1027,Active,TACK - BTK,Overlock,78.61,123
+Line-1,C,Night,Operator,OP1028,Operator_1028,Active,2ND SIDESEAM WITH LABEL,Overlock,81.73,136
+Line-1,C,Night,Operator,OP1028,Operator_1028,Active,SLEEVE ATTACH,Lockstitch,75.14,56
+Line-1,B,Day,Operator,OP1028,Operator_1028,Active,SHOULDER TAPE,Overlock,76.8,149
+Line-1,B,Night,Operator,OP1028,Operator_1028,Active,TROUSER FRONT JOINING,Overlock,82.89,73
+Line-1,A,Night,Operator,OP1028,Operator_1028,Active,ARM HOLE TACKING,Overlock,94.56,123
+Line-1,C,Day,Operator,OP1028,Operator_1028,Active,FRONT PART PICKING,Lockstitch,81.18,91
+Line-1,B,Day,Supervisor,OP1029,Operator_1029,Active,HEATSEAL,Flatbed,74.83,88
+Line-1,A,Day,Supervisor,OP1029,Operator_1029,Active,2ND SIDESEAM WITH LABEL,Flatbed,85.97,82
+Line-1,B,Day,Supervisor,OP1029,Operator_1029,Active,TACK - BTK,Lockstitch,88.99,150
+Line-1,A,Day,Supervisor,OP1029,Operator_1029,Active,SLEEVE ATTACH,Lockstitch,94.03,119
+Line-1,A,Night,Supervisor,OP1029,Operator_1029,Active,LABEL ATTACH,Overlock,75.35,126
+Line-1,C,Night,Supervisor,OP1029,Operator_1029,Active,NECK BINDING,Flatbed,70.6,145
+Line-1,B,Day,Supervisor,OP1030,Operator_1030,Active,SHOULDER JOINING,Overlock,79.08,122
+Line-1,C,Night,Supervisor,OP1030,Operator_1030,Active,QUALITY CHECK,Flatbed,77.88,64
+Line-1,A,Night,Supervisor,OP1030,Operator_1030,Active,ARM HOLE TACKING,Flatbed,88.31,74
+Line-1,C,Night,Supervisor,OP1030,Operator_1030,Active,HEATSEAL,Lockstitch,70.28,109
+Line-1,A,Day,Supervisor,OP1030,Operator_1030,Active,HELPER,Lockstitch,71.57,85
+Line-1,A,Day,Supervisor,OP1030,Operator_1030,Active,TAPE ATTACH,Overlock,78.44,99
+Line-2,B,Day,Supervisor,OP1031,Operator_1031,Active,TOP STITCH NECK,Flatbed,70.9,94
+Line-2,A,Day,Supervisor,OP1031,Operator_1031,Active,SNAP BUTTON ATTACH,Flatbed,84.94,84
+Line-2,B,Night,Supervisor,OP1031,Operator_1031,Active,ARM HOLE TACKING,Lockstitch,76.35,116
+Line-2,C,Night,Supervisor,OP1031,Operator_1031,Active,SLEEVE HEM,Flatbed,73.04,68
+Line-2,A,Day,Supervisor,OP1031,Operator_1031,Active,BOTTOM BINDING,Overlock,89.84,66
+Line-2,B,Day,Supervisor,OP1031,Operator_1031,Active,POCKET ATTACH,Overlock,92.75,140
+Line-2,A,Day,Operator,OP1032,Operator_1032,Active,PRE/DART OL,Lockstitch,77.07,135
+Line-2,C,Night,Operator,OP1032,Operator_1032,Active,QUALITY CHECK,Flatbed,72.34,144
+Line-2,C,Day,Operator,OP1032,Operator_1032,Active,HEATSEAL,Overlock,81.92,96
+Line-2,A,Night,Operator,OP1032,Operator_1032,Active,1ST SIDESEAM,Flatbed,75.31,141
+Line-2,C,Night,Operator,OP1032,Operator_1032,Active,SHOULDER TAPE,Overlock,87.03,111
+Line-2,B,Day,Operator,OP1032,Operator_1032,Active,TACK - BTK,Flatbed,79.07,111
+Line-2,A,Day,Helper,OP1033,Operator_1033,Active,PRESSING,Flatbed,78.45,69
+Line-2,A,Night,Helper,OP1033,Operator_1033,Active,COLLAR ATTACH,Overlock,85.32,130
+Line-2,B,Night,Helper,OP1033,Operator_1033,Active,NECK BINDING,Flatbed,80.98,90
+Line-2,C,Night,Helper,OP1033,Operator_1033,Active,POCKET ATTACH,Lockstitch,94.7,64
+Line-2,A,Night,Helper,OP1033,Operator_1033,Active,SHOULDER TAPE,Lockstitch,86.61,89
+Line-2,A,Night,Helper,OP1033,Operator_1033,Active,2ND SIDESEAM WITH LABEL,Flatbed,73.7,87
+Line-2,A,Night,Supervisor,OP1034,Operator_1034,Active,TAPE ATTACH,Overlock,74.24,142
+Line-2,A,Day,Supervisor,OP1034,Operator_1034,Active,PRESSING,Flatbed,73.78,110
+Line-2,A,Night,Supervisor,OP1034,Operator_1034,Active,PRE/DART OL,Lockstitch,88.48,76
+Line-2,B,Night,Supervisor,OP1034,Operator_1034,Active,SLEEVE HEM,Lockstitch,70.22,143
+Line-2,A,Night,Supervisor,OP1034,Operator_1034,Active,BACK PART PICKING,Flatbed,70.34,76
+Line-2,A,Day,Supervisor,OP1034,Operator_1034,Active,HELPER,Overlock,80.7,140
+Line-2,B,Night,Supervisor,OP1035,Operator_1035,Active,LABEL ATTACH,Overlock,82.3,138
+Line-2,A,Night,Supervisor,OP1035,Operator_1035,Active,PRE/DART OL,Lockstitch,79.29,105
+Line-2,B,Day,Supervisor,OP1035,Operator_1035,Active,ARM HOLE TACKING,Overlock,76.23,76
+Line-2,B,Day,Supervisor,OP1035,Operator_1035,Active,HELPER,Lockstitch,89.7,80
+Line-2,A,Night,Supervisor,OP1035,Operator_1035,Active,1ST SIDESEAM,Flatbed,94.06,87
+Line-2,C,Day,Supervisor,OP1035,Operator_1035,Active,SIDE SEAM JOINING,Flatbed,85.52,96
+Line-2,A,Day,Supervisor,OP1036,Operator_1036,Active,POCKET ATTACH,Flatbed,72.92,116
+Line-2,B,Day,Supervisor,OP1036,Operator_1036,Active,2ND SIDESEAM WITH LABEL,Lockstitch,84.29,149
+Line-2,A,Day,Supervisor,OP1036,Operator_1036,Active,HELPER,Overlock,91.0,75
+Line-2,A,Night,Supervisor,OP1036,Operator_1036,Active,TROUSER BACK JOINING,Lockstitch,92.15,73
+Line-2,A,Day,Supervisor,OP1036,Operator_1036,Active,LABEL ATTACH,Lockstitch,84.36,126
+Line-2,A,Night,Supervisor,OP1036,Operator_1036,Active,FRONT PART PICKING,Flatbed,94.13,124
+Line-2,C,Day,Supervisor,OP1037,Operator_1037,Active,SLEEVE NOTCH,Flatbed,88.71,118
+Line-2,A,Day,Supervisor,OP1037,Operator_1037,Active,BACK PART PICKING,Flatbed,75.87,95
+Line-2,B,Day,Supervisor,OP1037,Operator_1037,Active,TAPE ATTACH,Lockstitch,87.94,111
+Line-2,B,Day,Supervisor,OP1037,Operator_1037,Active,HELPER,Lockstitch,79.8,91
+Line-2,B,Night,Supervisor,OP1037,Operator_1037,Active,BOTTOM BINDING,Lockstitch,80.73,57
+Line-2,B,Night,Supervisor,OP1037,Operator_1037,Active,SLEEVE HEM,Flatbed,71.54,89
+Line-2,B,Night,Helper,OP1038,Operator_1038,Active,TOP STITCH NECK,Flatbed,79.78,93
+Line-2,B,Day,Helper,OP1038,Operator_1038,Active,QUALITY CHECK,Lockstitch,75.96,134
+Line-2,B,Night,Helper,OP1038,Operator_1038,Active,LABEL ATTACH,Lockstitch,73.25,85
+Line-2,C,Night,Helper,OP1038,Operator_1038,Active,2ND SIDESEAM WITH LABEL,Overlock,73.08,126
+Line-2,C,Day,Helper,OP1038,Operator_1038,Active,COLLAR ATTACH,Overlock,88.66,128
+Line-2,A,Night,Helper,OP1038,Operator_1038,Active,SIDE SEAM JOINING,Overlock,74.57,70
+Line-2,B,Night,Supervisor,OP1039,Operator_1039,Active,BOTTOM HEMMING,Lockstitch,85.63,103
+Line-2,B,Night,Supervisor,OP1039,Operator_1039,Active,SHOULDER JOINING,Overlock,72.01,149
+Line-2,B,Night,Supervisor,OP1039,Operator_1039,Active,SLEEVE NOTCH,Flatbed,86.53,63
+Line-2,B,Night,Supervisor,OP1039,Operator_1039,Active,TACK - BTK,Overlock,75.36,67
+Line-2,B,Day,Supervisor,OP1039,Operator_1039,Active,PACKING,Flatbed,85.39,81
+Line-2,A,Day,Supervisor,OP1039,Operator_1039,Active,TROUSER BACK JOINING,Flatbed,72.62,149
+Line-2,B,Day,Operator,OP1040,Operator_1040,Active,1ST SIDESEAM,Overlock,80.91,132
+Line-2,A,Night,Operator,OP1040,Operator_1040,Active,TOP STITCH NECK,Overlock,76.56,82
+Line-2,C,Night,Operator,OP1040,Operator_1040,Active,HEATSEAL,Lockstitch,88.63,66
+Line-2,C,Day,Operator,OP1040,Operator_1040,Active,QUALITY CHECK,Flatbed,91.35,131
+Line-2,C,Day,Operator,OP1040,Operator_1040,Active,SIDE SEAM JOINING,Lockstitch,82.21,102
+Line-2,C,Day,Operator,OP1040,Operator_1040,Active,SLEEVE HEM,Overlock,84.61,69
+Line-2,A,Day,Helper,OP1041,Operator_1041,Active,SHOULDER JOINING,Flatbed,79.71,147
+Line-2,C,Day,Helper,OP1041,Operator_1041,Active,BOTTOM HEMMING,Flatbed,74.39,117
+Line-2,A,Day,Helper,OP1041,Operator_1041,Active,BOTTOM BINDING,Flatbed,76.28,115
+Line-2,A,Day,Helper,OP1041,Operator_1041,Active,TACK - BTK,Lockstitch,84.58,134
+Line-2,C,Day,Helper,OP1041,Operator_1041,Active,HEATSEAL,Lockstitch,73.03,79
+Line-2,C,Night,Helper,OP1041,Operator_1041,Active,TROUSER FRONT JOINING,Flatbed,82.49,112
+Line-2,A,Day,Helper,OP1042,Operator_1042,Active,BOTTOM HEMMING,Overlock,72.66,95
+Line-2,C,Day,Helper,OP1042,Operator_1042,Active,PACKING,Overlock,84.81,55
+Line-2,C,Day,Helper,OP1042,Operator_1042,Active,TROUSER FRONT JOINING,Lockstitch,81.25,136
+Line-2,B,Night,Helper,OP1042,Operator_1042,Active,PRE/DART OL,Overlock,82.49,72
+Line-2,B,Night,Helper,OP1042,Operator_1042,Active,TROUSER BACK JOINING,Overlock,74.3,80
+Line-2,B,Night,Helper,OP1042,Operator_1042,Active,WAISTBAND ATTACH,Lockstitch,81.18,119
+Line-2,B,Night,Supervisor,OP1043,Operator_1043,Active,TAPE ATTACH,Overlock,75.85,133
+Line-2,B,Night,Supervisor,OP1043,Operator_1043,Active,BACK PART PICKING,Overlock,70.77,123
+Line-2,C,Day,Supervisor,OP1043,Operator_1043,Active,HEATSEAL,Flatbed,72.65,112
+Line-2,C,Night,Supervisor,OP1043,Operator_1043,Active,SIDE SEAM JOINING,Lockstitch,78.42,95
+Line-2,B,Day,Supervisor,OP1043,Operator_1043,Active,1ST SIDESEAM,Lockstitch,91.82,97
+Line-2,C,Night,Supervisor,OP1043,Operator_1043,Active,SLEEVE ATTACH,Flatbed,82.6,58
+Line-2,C,Night,Helper,OP1044,Operator_1044,Active,HELPER,Overlock,89.17,141
+Line-2,B,Night,Helper,OP1044,Operator_1044,Active,TAPE ATTACH,Overlock,76.09,50
+Line-2,A,Night,Helper,OP1044,Operator_1044,Active,2ND SIDESEAM WITH LABEL,Flatbed,89.66,84
+Line-2,C,Night,Helper,OP1044,Operator_1044,Active,TOP STITCH NECK,Flatbed,78.86,78
+Line-2,A,Day,Helper,OP1044,Operator_1044,Active,POCKET ATTACH,Flatbed,89.86,71
+Line-2,C,Day,Helper,OP1044,Operator_1044,Active,BOTTOM BINDING,Overlock,89.64,148
+Line-2,B,Day,Operator,OP1045,Operator_1045,Active,QUALITY CHECK,Lockstitch,80.11,108
+Line-2,A,Night,Operator,OP1045,Operator_1045,Active,WAISTBAND ATTACH,Overlock,89.8,150
+Line-2,B,Day,Operator,OP1045,Operator_1045,Active,TROUSER FRONT JOINING,Flatbed,77.64,141
+Line-2,A,Day,Operator,OP1045,Operator_1045,Active,TACK - BTK,Lockstitch,74.55,83
+Line-2,A,Day,Operator,OP1045,Operator_1045,Active,SNAP BUTTON ATTACH,Flatbed,83.27,105
+Line-2,A,Day,Operator,OP1045,Operator_1045,Active,TROUSER BACK JOINING,Flatbed,84.36,50
+Line-2,C,Night,Supervisor,OP1046,Operator_1046,Active,HEATSEAL,Lockstitch,75.49,57
+Line-2,B,Night,Supervisor,OP1046,Operator_1046,Active,PRE/DART OL,Overlock,89.25,106
+Line-2,B,Night,Supervisor,OP1046,Operator_1046,Active,SLEEVE NOTCH,Flatbed,91.43,103
+Line-2,B,Night,Supervisor,OP1046,Operator_1046,Active,WAISTBAND ATTACH,Lockstitch,75.09,95
+Line-2,A,Night,Supervisor,OP1046,Operator_1046,Active,QUALITY CHECK,Overlock,73.43,73
+Line-2,A,Night,Supervisor,OP1046,Operator_1046,Active,SHOULDER TAPE,Lockstitch,70.68,62
+Line-2,C,Night,Supervisor,OP1047,Operator_1047,Active,SLEEVE ATTACH,Overlock,80.92,120
+Line-2,A,Night,Supervisor,OP1047,Operator_1047,Active,1ST SIDESEAM,Lockstitch,74.39,76
+Line-2,A,Day,Supervisor,OP1047,Operator_1047,Active,BOTTOM HEMMING,Lockstitch,90.01,101
+Line-2,C,Night,Supervisor,OP1047,Operator_1047,Active,2ND SIDESEAM WITH LABEL,Lockstitch,85.06,68
+Line-2,A,Night,Supervisor,OP1047,Operator_1047,Active,POCKET ATTACH,Flatbed,89.8,110
+Line-2,C,Night,Supervisor,OP1047,Operator_1047,Active,COLLAR ATTACH,Overlock,71.84,74
+Line-2,C,Night,Helper,OP1048,Operator_1048,Active,HELPER,Overlock,77.18,126
+Line-2,B,Day,Helper,OP1048,Operator_1048,Active,LABEL ATTACH,Lockstitch,84.9,114
+Line-2,B,Night,Helper,OP1048,Operator_1048,Active,SLEEVE NOTCH,Lockstitch,85.0,63
+Line-2,C,Day,Helper,OP1048,Operator_1048,Active,TROUSER BACK JOINING,Overlock,76.57,123
+Line-2,A,Day,Helper,OP1048,Operator_1048,Active,ARM HOLE TACKING,Lockstitch,91.17,117
+Line-2,C,Day,Helper,OP1048,Operator_1048,Active,BOTTOM BINDING,Overlock,80.12,72
+Line-2,A,Night,Supervisor,OP1049,Operator_1049,Active,PRE/DART OL,Lockstitch,90.47,116
+Line-2,C,Day,Supervisor,OP1049,Operator_1049,Active,SNAP BUTTON ATTACH,Overlock,87.31,118
+Line-2,B,Night,Supervisor,OP1049,Operator_1049,Active,HEATSEAL,Lockstitch,70.16,115
+Line-2,C,Day,Supervisor,OP1049,Operator_1049,Active,SLEEVE HEM,Lockstitch,73.96,59
+Line-2,A,Night,Supervisor,OP1049,Operator_1049,Active,2ND SIDESEAM WITH LABEL,Flatbed,79.44,130
+Line-2,C,Day,Supervisor,OP1049,Operator_1049,Active,PACKING,Flatbed,87.68,93
+Line-2,B,Night,Helper,OP1050,Operator_1050,Active,BOTTOM BINDING,Flatbed,86.84,102
+Line-2,A,Night,Helper,OP1050,Operator_1050,Active,NECK BINDING,Lockstitch,87.93,72
+Line-2,C,Day,Helper,OP1050,Operator_1050,Active,FRONT PART PICKING,Lockstitch,81.64,74
+Line-2,A,Day,Helper,OP1050,Operator_1050,Active,PRE/DART OL,Lockstitch,93.94,88
+Line-2,B,Night,Helper,OP1050,Operator_1050,Active,SHOULDER JOINING,Overlock,89.57,84
+Line-2,A,Night,Helper,OP1050,Operator_1050,Active,SLEEVE NOTCH,Lockstitch,92.81,62
+Line-2,A,Day,Supervisor,OP1051,Operator_1051,Active,TAPE ATTACH,Overlock,72.19,63
+Line-2,A,Day,Supervisor,OP1051,Operator_1051,Active,NECK BINDING,Lockstitch,84.27,139
+Line-2,C,Day,Supervisor,OP1051,Operator_1051,Active,TROUSER FRONT JOINING,Overlock,92.9,116
+Line-2,B,Night,Supervisor,OP1051,Operator_1051,Active,POCKET ATTACH,Flatbed,71.63,104
+Line-2,B,Day,Supervisor,OP1051,Operator_1051,Active,SIDE SEAM JOINING,Overlock,81.38,133
+Line-2,A,Night,Supervisor,OP1051,Operator_1051,Active,TOP STITCH NECK,Overlock,82.33,50
+Line-2,C,Day,Supervisor,OP1052,Operator_1052,Active,2ND SIDESEAM WITH LABEL,Lockstitch,93.47,74
+Line-2,C,Day,Supervisor,OP1052,Operator_1052,Active,HELPER,Overlock,72.21,133
+Line-2,C,Night,Supervisor,OP1052,Operator_1052,Active,TACK - BTK,Flatbed,74.23,89
+Line-2,A,Day,Supervisor,OP1052,Operator_1052,Active,SIDE SEAM JOINING,Flatbed,90.46,106
+Line-2,A,Night,Supervisor,OP1052,Operator_1052,Active,SLEEVE ATTACH,Lockstitch,94.22,79
+Line-2,C,Night,Supervisor,OP1052,Operator_1052,Active,TROUSER FRONT JOINING,Lockstitch,76.76,116
+Line-2,A,Day,Supervisor,OP1053,Operator_1053,Active,SIDE SEAM JOINING,Overlock,92.37,81
+Line-2,C,Night,Supervisor,OP1053,Operator_1053,Active,LABEL ATTACH,Overlock,89.82,96
+Line-2,B,Night,Supervisor,OP1053,Operator_1053,Active,POCKET ATTACH,Flatbed,76.93,69
+Line-2,B,Night,Supervisor,OP1053,Operator_1053,Active,SLEEVE HEM,Overlock,91.24,111
+Line-2,A,Day,Supervisor,OP1053,Operator_1053,Active,2ND SIDESEAM WITH LABEL,Flatbed,79.91,139
+Line-2,A,Night,Supervisor,OP1053,Operator_1053,Active,BOTTOM HEMMING,Overlock,90.55,99
+Line-2,B,Night,Helper,OP1054,Operator_1054,Active,NECK BINDING,Flatbed,94.66,142
+Line-2,B,Day,Helper,OP1054,Operator_1054,Active,SLEEVE ATTACH,Lockstitch,86.48,94
+Line-2,C,Day,Helper,OP1054,Operator_1054,Active,ARM HOLE TACKING,Overlock,75.53,88
+Line-2,A,Night,Helper,OP1054,Operator_1054,Active,QUALITY CHECK,Lockstitch,82.28,104
+Line-2,C,Night,Helper,OP1054,Operator_1054,Active,FRONT PART PICKING,Lockstitch,91.82,119
+Line-2,A,Day,Helper,OP1054,Operator_1054,Active,HELPER,Lockstitch,86.09,132
+Line-2,A,Day,Helper,OP1055,Operator_1055,Active,SLEEVE ATTACH,Overlock,83.79,137
+Line-2,A,Night,Helper,OP1055,Operator_1055,Active,TAPE ATTACH,Flatbed,87.78,98
+Line-2,A,Day,Helper,OP1055,Operator_1055,Active,SHOULDER TAPE,Lockstitch,89.64,60
+Line-2,B,Day,Helper,OP1055,Operator_1055,Active,QUALITY CHECK,Flatbed,86.02,100
+Line-2,B,Day,Helper,OP1055,Operator_1055,Active,HEATSEAL,Lockstitch,89.05,70
+Line-2,B,Night,Helper,OP1055,Operator_1055,Active,LABEL ATTACH,Flatbed,75.1,134
+Line-2,A,Night,Operator,OP1056,Operator_1056,Active,NECK BINDING,Overlock,86.09,55
+Line-2,B,Day,Operator,OP1056,Operator_1056,Active,HEATSEAL,Lockstitch,75.06,50
+Line-2,B,Day,Operator,OP1056,Operator_1056,Active,BACK PART PICKING,Lockstitch,89.35,91
+Line-2,A,Day,Operator,OP1056,Operator_1056,Active,SHOULDER JOINING,Lockstitch,84.94,137
+Line-2,C,Day,Operator,OP1056,Operator_1056,Active,COLLAR ATTACH,Lockstitch,87.56,73
+Line-2,B,Night,Operator,OP1056,Operator_1056,Active,1ST SIDESEAM,Lockstitch,89.92,92
+Line-2,B,Night,Supervisor,OP1057,Operator_1057,Active,PACKING,Lockstitch,89.46,145
+Line-2,C,Night,Supervisor,OP1057,Operator_1057,Active,PRE/DART OL,Lockstitch,91.7,118
+Line-2,C,Night,Supervisor,OP1057,Operator_1057,Active,SIDE SEAM JOINING,Flatbed,74.13,139
+Line-2,C,Day,Supervisor,OP1057,Operator_1057,Active,LABEL ATTACH,Flatbed,90.1,103
+Line-2,A,Night,Supervisor,OP1057,Operator_1057,Active,BOTTOM BINDING,Flatbed,90.18,97
+Line-2,A,Night,Supervisor,OP1057,Operator_1057,Active,2ND SIDESEAM WITH LABEL,Overlock,82.19,74
+Line-2,C,Day,Supervisor,OP1058,Operator_1058,Active,TAPE ATTACH,Overlock,82.73,121
+Line-2,C,Night,Supervisor,OP1058,Operator_1058,Active,TROUSER FRONT JOINING,Lockstitch,71.14,93
+Line-2,A,Night,Supervisor,OP1058,Operator_1058,Active,QUALITY CHECK,Lockstitch,80.3,107
+Line-2,A,Night,Supervisor,OP1058,Operator_1058,Active,SLEEVE NOTCH,Lockstitch,92.26,127
+Line-2,C,Day,Supervisor,OP1058,Operator_1058,Active,PRE/DART OL,Flatbed,84.84,122
+Line-2,B,Night,Supervisor,OP1058,Operator_1058,Active,COLLAR ATTACH,Flatbed,84.03,51
+Line-2,B,Day,Supervisor,OP1059,Operator_1059,Active,SHOULDER JOINING,Lockstitch,71.69,58
+Line-2,C,Day,Supervisor,OP1059,Operator_1059,Active,BACK PART PICKING,Overlock,92.99,146
+Line-2,A,Night,Supervisor,OP1059,Operator_1059,Active,SIDE SEAM JOINING,Lockstitch,79.45,150
+Line-2,B,Day,Supervisor,OP1059,Operator_1059,Active,COLLAR ATTACH,Lockstitch,90.94,51
+Line-2,A,Night,Supervisor,OP1059,Operator_1059,Active,POCKET ATTACH,Flatbed,75.11,101
+Line-2,B,Day,Supervisor,OP1059,Operator_1059,Active,NECK BINDING,Overlock,85.81,134
+Line-2,C,Day,Helper,OP1060,Operator_1060,Active,TROUSER FRONT JOINING,Lockstitch,74.57,134
+Line-2,B,Day,Helper,OP1060,Operator_1060,Active,2ND SIDESEAM WITH LABEL,Overlock,90.38,89
+Line-2,A,Day,Helper,OP1060,Operator_1060,Active,TAPE ATTACH,Lockstitch,76.0,135
+Line-2,B,Night,Helper,OP1060,Operator_1060,Active,TOP STITCH NECK,Overlock,89.21,85
+Line-2,B,Day,Helper,OP1060,Operator_1060,Active,SLEEVE HEM,Lockstitch,75.45,53
+Line-2,A,Day,Helper,OP1060,Operator_1060,Active,LABEL ATTACH,Lockstitch,79.35,122
+Line-3,B,Night,Supervisor,OP1061,Operator_1061,Active,SLEEVE ATTACH,Overlock,91.51,129
+Line-3,C,Night,Supervisor,OP1061,Operator_1061,Active,SNAP BUTTON ATTACH,Flatbed,90.81,120
+Line-3,A,Night,Supervisor,OP1061,Operator_1061,Active,BOTTOM BINDING,Overlock,84.34,144
+Line-3,C,Night,Supervisor,OP1061,Operator_1061,Active,TAPE ATTACH,Flatbed,86.61,77
+Line-3,C,Night,Supervisor,OP1061,Operator_1061,Active,SHOULDER TAPE,Flatbed,84.7,122
+Line-3,C,Night,Supervisor,OP1061,Operator_1061,Active,PRESSING,Lockstitch,75.28,82
+Line-3,B,Night,Helper,OP1062,Operator_1062,Active,PACKING,Overlock,77.89,74
+Line-3,B,Day,Helper,OP1062,Operator_1062,Active,HELPER,Lockstitch,86.22,130
+Line-3,C,Night,Helper,OP1062,Operator_1062,Active,BOTTOM BINDING,Lockstitch,92.38,62
+Line-3,A,Night,Helper,OP1062,Operator_1062,Active,SIDE SEAM JOINING,Overlock,93.81,95
+Line-3,A,Night,Helper,OP1062,Operator_1062,Active,SHOULDER TAPE,Overlock,92.76,55
+Line-3,C,Night,Helper,OP1062,Operator_1062,Active,SLEEVE ATTACH,Lockstitch,75.13,138
+Line-3,B,Day,Operator,OP1063,Operator_1063,Active,PRE/DART OL,Overlock,87.18,63
+Line-3,A,Night,Operator,OP1063,Operator_1063,Active,NECK BINDING,Overlock,87.95,64
+Line-3,A,Night,Operator,OP1063,Operator_1063,Active,PACKING,Flatbed,89.73,139
+Line-3,C,Day,Operator,OP1063,Operator_1063,Active,TAPE ATTACH,Overlock,70.56,145
+Line-3,A,Night,Operator,OP1063,Operator_1063,Active,QUALITY CHECK,Overlock,85.07,66
+Line-3,C,Night,Operator,OP1063,Operator_1063,Active,SLEEVE ATTACH,Lockstitch,87.58,92
+Line-3,C,Night,Supervisor,OP1064,Operator_1064,Active,PACKING,Lockstitch,91.77,83
+Line-3,B,Day,Supervisor,OP1064,Operator_1064,Active,SLEEVE HEM,Lockstitch,80.86,96
+Line-3,B,Night,Supervisor,OP1064,Operator_1064,Active,TROUSER BACK JOINING,Lockstitch,75.52,106
+Line-3,B,Night,Supervisor,OP1064,Operator_1064,Active,PRE/DART OL,Overlock,83.6,54
+Line-3,A,Night,Supervisor,OP1064,Operator_1064,Active,SIDE SEAM JOINING,Overlock,83.93,136
+Line-3,A,Day,Supervisor,OP1064,Operator_1064,Active,BACK PART PICKING,Lockstitch,84.81,82
+Line-3,C,Night,Helper,OP1065,Operator_1065,Active,PACKING,Lockstitch,76.31,90
+Line-3,B,Day,Helper,OP1065,Operator_1065,Active,WAISTBAND ATTACH,Lockstitch,72.94,119
+Line-3,B,Night,Helper,OP1065,Operator_1065,Active,POCKET ATTACH,Lockstitch,87.66,60
+Line-3,B,Day,Helper,OP1065,Operator_1065,Active,BOTTOM HEMMING,Flatbed,73.36,129
+Line-3,A,Day,Helper,OP1065,Operator_1065,Active,TOP STITCH NECK,Overlock,75.14,82
+Line-3,B,Day,Helper,OP1065,Operator_1065,Active,SLEEVE HEM,Overlock,88.94,50
+Line-3,B,Day,Supervisor,OP1066,Operator_1066,Active,PRE/DART OL,Overlock,86.11,60
+Line-3,B,Night,Supervisor,OP1066,Operator_1066,Active,TOP STITCH NECK,Lockstitch,88.13,143
+Line-3,B,Day,Supervisor,OP1066,Operator_1066,Active,LABEL ATTACH,Lockstitch,87.41,83
+Line-3,A,Day,Supervisor,OP1066,Operator_1066,Active,POCKET ATTACH,Flatbed,85.02,78
+Line-3,A,Night,Supervisor,OP1066,Operator_1066,Active,BOTTOM HEMMING,Flatbed,85.83,121
+Line-3,B,Night,Supervisor,OP1066,Operator_1066,Active,SLEEVE ATTACH,Flatbed,82.85,75
+Line-3,C,Night,Supervisor,OP1067,Operator_1067,Active,ARM HOLE TACKING,Lockstitch,73.41,147
+Line-3,C,Day,Supervisor,OP1067,Operator_1067,Active,FRONT PART PICKING,Lockstitch,84.52,114
+Line-3,C,Day,Supervisor,OP1067,Operator_1067,Active,NECK BINDING,Overlock,73.43,115
+Line-3,A,Night,Supervisor,OP1067,Operator_1067,Active,TROUSER BACK JOINING,Lockstitch,75.62,67
+Line-3,C,Night,Supervisor,OP1067,Operator_1067,Active,SIDE SEAM JOINING,Flatbed,76.02,62
+Line-3,C,Day,Supervisor,OP1067,Operator_1067,Active,COLLAR ATTACH,Overlock,80.67,123
+Line-3,C,Night,Helper,OP1068,Operator_1068,Active,SLEEVE ATTACH,Overlock,92.34,121
+Line-3,B,Day,Helper,OP1068,Operator_1068,Active,COLLAR ATTACH,Lockstitch,92.07,64
+Line-3,A,Night,Helper,OP1068,Operator_1068,Active,SHOULDER TAPE,Flatbed,83.9,97
+Line-3,A,Night,Helper,OP1068,Operator_1068,Active,SIDE SEAM JOINING,Lockstitch,85.33,146
+Line-3,A,Day,Helper,OP1068,Operator_1068,Active,ARM HOLE TACKING,Lockstitch,84.89,107
+Line-3,A,Day,Helper,OP1068,Operator_1068,Active,TROUSER BACK JOINING,Lockstitch,74.65,99
+Line-3,B,Night,Supervisor,OP1069,Operator_1069,Active,ARM HOLE TACKING,Overlock,78.58,111
+Line-3,A,Day,Supervisor,OP1069,Operator_1069,Active,PRESSING,Overlock,78.08,55
+Line-3,C,Night,Supervisor,OP1069,Operator_1069,Active,PRE/DART OL,Overlock,71.09,62
+Line-3,C,Night,Supervisor,OP1069,Operator_1069,Active,HEATSEAL,Flatbed,75.6,84
+Line-3,C,Night,Supervisor,OP1069,Operator_1069,Active,QUALITY CHECK,Flatbed,91.74,61
+Line-3,A,Night,Supervisor,OP1069,Operator_1069,Active,TROUSER BACK JOINING,Lockstitch,84.49,138
+Line-3,C,Day,Helper,OP1070,Operator_1070,Active,ARM HOLE TACKING,Lockstitch,82.98,76
+Line-3,A,Day,Helper,OP1070,Operator_1070,Active,TACK - BTK,Lockstitch,92.97,69
+Line-3,C,Day,Helper,OP1070,Operator_1070,Active,SLEEVE ATTACH,Overlock,89.76,59
+Line-3,A,Night,Helper,OP1070,Operator_1070,Active,BACK PART PICKING,Flatbed,93.1,104
+Line-3,B,Night,Helper,OP1070,Operator_1070,Active,HEATSEAL,Overlock,76.14,135
+Line-3,B,Day,Helper,OP1070,Operator_1070,Active,FRONT PART PICKING,Flatbed,86.87,122
+Line-3,B,Night,Supervisor,OP1071,Operator_1071,Active,POCKET ATTACH,Lockstitch,72.07,130
+Line-3,A,Day,Supervisor,OP1071,Operator_1071,Active,PRESSING,Overlock,74.08,93
+Line-3,A,Day,Supervisor,OP1071,Operator_1071,Active,1ST SIDESEAM,Overlock,81.34,123
+Line-3,B,Night,Supervisor,OP1071,Operator_1071,Active,SLEEVE ATTACH,Flatbed,83.24,89
+Line-3,B,Day,Supervisor,OP1071,Operator_1071,Active,SLEEVE NOTCH,Lockstitch,84.39,65
+Line-3,C,Night,Supervisor,OP1071,Operator_1071,Active,LABEL ATTACH,Overlock,73.19,126
+Line-3,A,Day,Supervisor,OP1072,Operator_1072,Active,BOTTOM BINDING,Flatbed,92.09,51
+Line-3,C,Night,Supervisor,OP1072,Operator_1072,Active,HELPER,Overlock,91.49,91
+Line-3,A,Night,Supervisor,OP1072,Operator_1072,Active,HEATSEAL,Overlock,87.61,124
+Line-3,C,Day,Supervisor,OP1072,Operator_1072,Active,SIDE SEAM JOINING,Lockstitch,93.56,120
+Line-3,A,Day,Supervisor,OP1072,Operator_1072,Active,FRONT PART PICKING,Lockstitch,85.81,71
+Line-3,C,Day,Supervisor,OP1072,Operator_1072,Active,NECK BINDING,Lockstitch,81.95,50
+Line-3,B,Day,Operator,OP1073,Operator_1073,Active,FRONT PART PICKING,Lockstitch,83.99,99
+Line-3,C,Night,Operator,OP1073,Operator_1073,Active,BOTTOM HEMMING,Lockstitch,80.22,108
+Line-3,A,Night,Operator,OP1073,Operator_1073,Active,SIDE SEAM JOINING,Overlock,86.53,102
+Line-3,C,Day,Operator,OP1073,Operator_1073,Active,QUALITY CHECK,Flatbed,89.66,79
+Line-3,A,Night,Operator,OP1073,Operator_1073,Active,PACKING,Lockstitch,81.82,54
+Line-3,B,Day,Operator,OP1073,Operator_1073,Active,PRE/DART OL,Lockstitch,80.4,55
+Line-3,A,Night,Supervisor,OP1074,Operator_1074,Active,QUALITY CHECK,Lockstitch,81.82,93
+Line-3,C,Day,Supervisor,OP1074,Operator_1074,Active,SNAP BUTTON ATTACH,Overlock,76.62,78
+Line-3,C,Day,Supervisor,OP1074,Operator_1074,Active,WAISTBAND ATTACH,Lockstitch,74.24,103
+Line-3,C,Day,Supervisor,OP1074,Operator_1074,Active,SIDE SEAM JOINING,Flatbed,94.64,59
+Line-3,B,Night,Supervisor,OP1074,Operator_1074,Active,HELPER,Flatbed,87.87,76
+Line-3,B,Day,Supervisor,OP1074,Operator_1074,Active,TOP STITCH NECK,Lockstitch,89.28,95
+Line-3,B,Day,Supervisor,OP1075,Operator_1075,Active,QUALITY CHECK,Flatbed,76.21,68
+Line-3,C,Day,Supervisor,OP1075,Operator_1075,Active,2ND SIDESEAM WITH LABEL,Flatbed,93.94,134
+Line-3,A,Night,Supervisor,OP1075,Operator_1075,Active,SLEEVE HEM,Overlock,73.82,70
+Line-3,A,Day,Supervisor,OP1075,Operator_1075,Active,NECK BINDING,Flatbed,79.02,86
+Line-3,A,Night,Supervisor,OP1075,Operator_1075,Active,HEATSEAL,Flatbed,92.62,129
+Line-3,C,Day,Supervisor,OP1075,Operator_1075,Active,SHOULDER JOINING,Flatbed,80.11,68
+Line-3,A,Night,Helper,OP1076,Operator_1076,Active,ARM HOLE TACKING,Lockstitch,78.65,54
+Line-3,B,Night,Helper,OP1076,Operator_1076,Active,POCKET ATTACH,Flatbed,73.77,75
+Line-3,B,Day,Helper,OP1076,Operator_1076,Active,PRESSING,Flatbed,89.67,147
+Line-3,C,Day,Helper,OP1076,Operator_1076,Active,BOTTOM HEMMING,Lockstitch,70.46,92
+Line-3,C,Day,Helper,OP1076,Operator_1076,Active,SHOULDER TAPE,Lockstitch,85.64,131
+Line-3,C,Night,Helper,OP1076,Operator_1076,Active,NECK BINDING,Flatbed,79.67,124
+Line-3,B,Day,Helper,OP1077,Operator_1077,Active,HELPER,Overlock,76.26,127
+Line-3,C,Night,Helper,OP1077,Operator_1077,Active,SHOULDER TAPE,Flatbed,89.39,123
+Line-3,B,Night,Helper,OP1077,Operator_1077,Active,TROUSER BACK JOINING,Overlock,71.22,82
+Line-3,B,Night,Helper,OP1077,Operator_1077,Active,BOTTOM BINDING,Lockstitch,80.12,62
+Line-3,C,Day,Helper,OP1077,Operator_1077,Active,BACK PART PICKING,Lockstitch,77.91,95
+Line-3,A,Day,Helper,OP1077,Operator_1077,Active,QUALITY CHECK,Lockstitch,83.42,84
+Line-3,A,Night,Operator,OP1078,Operator_1078,Active,SHOULDER TAPE,Lockstitch,78.74,134
+Line-3,B,Day,Operator,OP1078,Operator_1078,Active,NECK BINDING,Flatbed,83.41,84
+Line-3,C,Day,Operator,OP1078,Operator_1078,Active,SNAP BUTTON ATTACH,Overlock,81.68,70
+Line-3,B,Day,Operator,OP1078,Operator_1078,Active,2ND SIDESEAM WITH LABEL,Flatbed,85.98,108
+Line-3,B,Day,Operator,OP1078,Operator_1078,Active,COLLAR ATTACH,Flatbed,93.31,88
+Line-3,B,Night,Operator,OP1078,Operator_1078,Active,LABEL ATTACH,Overlock,80.77,51
+Line-3,A,Night,Operator,OP1079,Operator_1079,Active,QUALITY CHECK,Lockstitch,88.9,114
+Line-3,A,Day,Operator,OP1079,Operator_1079,Active,TROUSER FRONT JOINING,Lockstitch,93.28,125
+Line-3,A,Day,Operator,OP1079,Operator_1079,Active,NECK BINDING,Overlock,78.99,83
+Line-3,C,Night,Operator,OP1079,Operator_1079,Active,BACK PART PICKING,Overlock,74.31,80
+Line-3,B,Night,Operator,OP1079,Operator_1079,Active,2ND SIDESEAM WITH LABEL,Overlock,80.31,117
+Line-3,B,Night,Operator,OP1079,Operator_1079,Active,TACK - BTK,Lockstitch,92.9,143
+Line-3,A,Night,Operator,OP1080,Operator_1080,Active,SHOULDER TAPE,Flatbed,85.07,118
+Line-3,B,Night,Operator,OP1080,Operator_1080,Active,WAISTBAND ATTACH,Flatbed,87.73,150
+Line-3,C,Night,Operator,OP1080,Operator_1080,Active,TACK - BTK,Overlock,88.97,86
+Line-3,B,Night,Operator,OP1080,Operator_1080,Active,FRONT PART PICKING,Flatbed,86.41,116
+Line-3,A,Night,Operator,OP1080,Operator_1080,Active,PRE/DART OL,Overlock,80.47,120
+Line-3,C,Night,Operator,OP1080,Operator_1080,Active,LABEL ATTACH,Lockstitch,81.85,60
+Line-3,B,Night,Supervisor,OP1081,Operator_1081,Active,SHOULDER JOINING,Lockstitch,83.14,104
+Line-3,C,Night,Supervisor,OP1081,Operator_1081,Active,TROUSER BACK JOINING,Overlock,91.41,145
+Line-3,A,Night,Supervisor,OP1081,Operator_1081,Active,COLLAR ATTACH,Lockstitch,91.98,126
+Line-3,A,Night,Supervisor,OP1081,Operator_1081,Active,PRE/DART OL,Flatbed,83.89,127
+Line-3,A,Day,Supervisor,OP1081,Operator_1081,Active,TACK - BTK,Lockstitch,77.89,133
+Line-3,C,Day,Supervisor,OP1081,Operator_1081,Active,WAISTBAND ATTACH,Lockstitch,89.59,131
+Line-3,A,Day,Operator,OP1082,Operator_1082,Active,BOTTOM HEMMING,Overlock,70.08,66
+Line-3,A,Day,Operator,OP1082,Operator_1082,Active,COLLAR ATTACH,Lockstitch,89.89,53
+Line-3,C,Day,Operator,OP1082,Operator_1082,Active,WAISTBAND ATTACH,Flatbed,80.48,55
+Line-3,B,Day,Operator,OP1082,Operator_1082,Active,QUALITY CHECK,Overlock,78.6,113
+Line-3,B,Night,Operator,OP1082,Operator_1082,Active,SLEEVE NOTCH,Overlock,87.77,121
+Line-3,C,Day,Operator,OP1082,Operator_1082,Active,BACK PART PICKING,Flatbed,92.11,84
+Line-3,C,Night,Supervisor,OP1083,Operator_1083,Active,SNAP BUTTON ATTACH,Flatbed,76.74,137
+Line-3,C,Day,Supervisor,OP1083,Operator_1083,Active,HEATSEAL,Overlock,81.01,54
+Line-3,B,Day,Supervisor,OP1083,Operator_1083,Active,HELPER,Overlock,92.63,116
+Line-3,A,Day,Supervisor,OP1083,Operator_1083,Active,BOTTOM BINDING,Lockstitch,82.57,145
+Line-3,C,Night,Supervisor,OP1083,Operator_1083,Active,PRE/DART OL,Flatbed,71.91,106
+Line-3,B,Day,Supervisor,OP1083,Operator_1083,Active,BOTTOM HEMMING,Lockstitch,91.04,150
+Line-3,B,Day,Helper,OP1084,Operator_1084,Active,TACK - BTK,Flatbed,75.32,109
+Line-3,A,Night,Helper,OP1084,Operator_1084,Active,HEATSEAL,Lockstitch,80.4,110
+Line-3,A,Day,Helper,OP1084,Operator_1084,Active,TROUSER FRONT JOINING,Lockstitch,78.29,104
+Line-3,A,Day,Helper,OP1084,Operator_1084,Active,COLLAR ATTACH,Overlock,74.08,118
+Line-3,B,Night,Helper,OP1084,Operator_1084,Active,FRONT PART PICKING,Lockstitch,74.82,58
+Line-3,A,Day,Helper,OP1084,Operator_1084,Active,SHOULDER TAPE,Lockstitch,86.59,52
+Line-3,C,Day,Supervisor,OP1085,Operator_1085,Active,SHOULDER TAPE,Overlock,88.4,65
+Line-3,A,Day,Supervisor,OP1085,Operator_1085,Active,BOTTOM HEMMING,Lockstitch,75.01,69
+Line-3,B,Night,Supervisor,OP1085,Operator_1085,Active,PRE/DART OL,Overlock,80.49,50
+Line-3,A,Night,Supervisor,OP1085,Operator_1085,Active,TROUSER FRONT JOINING,Overlock,94.4,125
+Line-3,A,Day,Supervisor,OP1085,Operator_1085,Active,SHOULDER JOINING,Lockstitch,80.95,75
+Line-3,C,Day,Supervisor,OP1085,Operator_1085,Active,TACK - BTK,Lockstitch,87.77,101
+Line-3,A,Day,Supervisor,OP1086,Operator_1086,Active,BOTTOM BINDING,Flatbed,76.34,86
+Line-3,B,Night,Supervisor,OP1086,Operator_1086,Active,PRESSING,Overlock,83.12,104
+Line-3,A,Night,Supervisor,OP1086,Operator_1086,Active,SHOULDER TAPE,Flatbed,86.69,140
+Line-3,A,Day,Supervisor,OP1086,Operator_1086,Active,POCKET ATTACH,Flatbed,83.08,94
+Line-3,B,Night,Supervisor,OP1086,Operator_1086,Active,WAISTBAND ATTACH,Lockstitch,74.49,91
+Line-3,C,Day,Supervisor,OP1086,Operator_1086,Active,SIDE SEAM JOINING,Lockstitch,94.62,65
+Line-3,B,Night,Supervisor,OP1087,Operator_1087,Active,SIDE SEAM JOINING,Overlock,83.19,104
+Line-3,B,Day,Supervisor,OP1087,Operator_1087,Active,BOTTOM HEMMING,Lockstitch,76.52,74
+Line-3,A,Night,Supervisor,OP1087,Operator_1087,Active,SLEEVE HEM,Flatbed,94.64,104
+Line-3,C,Day,Supervisor,OP1087,Operator_1087,Active,BOTTOM BINDING,Flatbed,83.79,120
+Line-3,B,Day,Supervisor,OP1087,Operator_1087,Active,PRESSING,Lockstitch,70.35,113
+Line-3,A,Night,Supervisor,OP1087,Operator_1087,Active,ARM HOLE TACKING,Lockstitch,91.57,99
+Line-3,A,Day,Supervisor,OP1088,Operator_1088,Active,PACKING,Flatbed,77.02,141
+Line-3,C,Night,Supervisor,OP1088,Operator_1088,Active,LABEL ATTACH,Lockstitch,91.14,114
+Line-3,A,Night,Supervisor,OP1088,Operator_1088,Active,FRONT PART PICKING,Flatbed,87.12,76
+Line-3,A,Night,Supervisor,OP1088,Operator_1088,Active,SIDE SEAM JOINING,Lockstitch,74.23,122
+Line-3,A,Night,Supervisor,OP1088,Operator_1088,Active,COLLAR ATTACH,Overlock,85.52,143
+Line-3,B,Day,Supervisor,OP1088,Operator_1088,Active,ARM HOLE TACKING,Overlock,70.58,73
+Line-3,B,Day,Operator,OP1089,Operator_1089,Active,SHOULDER TAPE,Flatbed,77.83,101
+Line-3,A,Day,Operator,OP1089,Operator_1089,Active,TROUSER FRONT JOINING,Flatbed,91.15,129
+Line-3,B,Night,Operator,OP1089,Operator_1089,Active,NECK BINDING,Overlock,72.97,130
+Line-3,B,Night,Operator,OP1089,Operator_1089,Active,1ST SIDESEAM,Overlock,70.44,120
+Line-3,B,Night,Operator,OP1089,Operator_1089,Active,HEATSEAL,Flatbed,87.0,76
+Line-3,B,Day,Operator,OP1089,Operator_1089,Active,PRESSING,Lockstitch,74.28,143
+Line-3,A,Day,Operator,OP1090,Operator_1090,Active,1ST SIDESEAM,Flatbed,71.25,144
+Line-3,C,Night,Operator,OP1090,Operator_1090,Active,TROUSER BACK JOINING,Flatbed,70.42,91
+Line-3,A,Night,Operator,OP1090,Operator_1090,Active,SLEEVE ATTACH,Overlock,88.35,114
+Line-3,B,Night,Operator,OP1090,Operator_1090,Active,COLLAR ATTACH,Lockstitch,75.18,64
+Line-3,A,Day,Operator,OP1090,Operator_1090,Active,TROUSER FRONT JOINING,Lockstitch,81.75,92
+Line-3,B,Night,Operator,OP1090,Operator_1090,Active,SIDE SEAM JOINING,Flatbed,70.48,136
+Line-4,A,Night,Operator,OP1091,Operator_1091,Active,TROUSER BACK JOINING,Flatbed,87.32,71
+Line-4,B,Night,Operator,OP1091,Operator_1091,Active,BOTTOM BINDING,Overlock,78.18,123
+Line-4,B,Night,Operator,OP1091,Operator_1091,Active,TACK - BTK,Flatbed,76.29,103
+Line-4,C,Night,Operator,OP1091,Operator_1091,Active,SLEEVE NOTCH,Lockstitch,81.54,99
+Line-4,A,Day,Operator,OP1091,Operator_1091,Active,BOTTOM HEMMING,Flatbed,91.25,111
+Line-4,A,Night,Operator,OP1091,Operator_1091,Active,BACK PART PICKING,Lockstitch,74.54,126
+Line-4,C,Day,Supervisor,OP1092,Operator_1092,Active,PRESSING,Flatbed,83.72,74
+Line-4,A,Night,Supervisor,OP1092,Operator_1092,Active,SLEEVE ATTACH,Overlock,92.18,88
+Line-4,B,Night,Supervisor,OP1092,Operator_1092,Active,TROUSER FRONT JOINING,Flatbed,82.53,122
+Line-4,B,Day,Supervisor,OP1092,Operator_1092,Active,TOP STITCH NECK,Overlock,73.3,85
+Line-4,B,Day,Supervisor,OP1092,Operator_1092,Active,HELPER,Lockstitch,86.25,133
+Line-4,B,Night,Supervisor,OP1092,Operator_1092,Active,BOTTOM HEMMING,Overlock,83.63,108
+Line-4,C,Night,Supervisor,OP1093,Operator_1093,Active,TAPE ATTACH,Lockstitch,73.44,77
+Line-4,A,Day,Supervisor,OP1093,Operator_1093,Active,TROUSER BACK JOINING,Flatbed,79.12,86
+Line-4,C,Night,Supervisor,OP1093,Operator_1093,Active,TACK - BTK,Lockstitch,70.57,134
+Line-4,A,Day,Supervisor,OP1093,Operator_1093,Active,HELPER,Overlock,75.56,111
+Line-4,B,Day,Supervisor,OP1093,Operator_1093,Active,BOTTOM HEMMING,Overlock,77.74,75
+Line-4,A,Night,Supervisor,OP1093,Operator_1093,Active,SHOULDER JOINING,Flatbed,87.24,86
+Line-4,B,Day,Operator,OP1094,Operator_1094,Active,BACK PART PICKING,Overlock,78.24,137
+Line-4,A,Day,Operator,OP1094,Operator_1094,Active,ARM HOLE TACKING,Overlock,72.16,148
+Line-4,C,Day,Operator,OP1094,Operator_1094,Active,PRESSING,Lockstitch,70.88,63
+Line-4,B,Night,Operator,OP1094,Operator_1094,Active,SHOULDER JOINING,Overlock,79.9,133
+Line-4,A,Day,Operator,OP1094,Operator_1094,Active,SLEEVE NOTCH,Flatbed,81.8,118
+Line-4,A,Night,Operator,OP1094,Operator_1094,Active,TROUSER BACK JOINING,Lockstitch,84.58,55
+Line-4,A,Day,Operator,OP1095,Operator_1095,Active,NECK BINDING,Flatbed,91.24,55
+Line-4,A,Day,Operator,OP1095,Operator_1095,Active,HELPER,Flatbed,75.05,131
+Line-4,B,Day,Operator,OP1095,Operator_1095,Active,1ST SIDESEAM,Lockstitch,72.14,139
+Line-4,C,Day,Operator,OP1095,Operator_1095,Active,SNAP BUTTON ATTACH,Flatbed,81.59,128
+Line-4,C,Day,Operator,OP1095,Operator_1095,Active,2ND SIDESEAM WITH LABEL,Overlock,75.74,140
+Line-4,A,Day,Operator,OP1095,Operator_1095,Active,TAPE ATTACH,Lockstitch,71.24,58
+Line-4,C,Night,Helper,OP1096,Operator_1096,Active,SHOULDER TAPE,Overlock,72.11,149
+Line-4,B,Night,Helper,OP1096,Operator_1096,Active,NECK BINDING,Flatbed,86.12,56
+Line-4,B,Night,Helper,OP1096,Operator_1096,Active,PRESSING,Lockstitch,73.71,139
+Line-4,B,Night,Helper,OP1096,Operator_1096,Active,PACKING,Lockstitch,76.71,137
+Line-4,A,Night,Helper,OP1096,Operator_1096,Active,HELPER,Overlock,88.37,103
+Line-4,C,Night,Helper,OP1096,Operator_1096,Active,1ST SIDESEAM,Flatbed,84.5,141
+Line-4,C,Day,Helper,OP1097,Operator_1097,Active,BACK PART PICKING,Lockstitch,80.24,98
+Line-4,C,Night,Helper,OP1097,Operator_1097,Active,HELPER,Lockstitch,72.61,133
+Line-4,C,Night,Helper,OP1097,Operator_1097,Active,SHOULDER TAPE,Overlock,85.96,72
+Line-4,B,Night,Helper,OP1097,Operator_1097,Active,SLEEVE NOTCH,Lockstitch,70.3,53
+Line-4,B,Day,Helper,OP1097,Operator_1097,Active,TROUSER BACK JOINING,Lockstitch,82.89,146
+Line-4,C,Night,Helper,OP1097,Operator_1097,Active,ARM HOLE TACKING,Lockstitch,78.33,126
+Line-4,B,Day,Helper,OP1098,Operator_1098,Active,TAPE ATTACH,Flatbed,85.92,141
+Line-4,B,Night,Helper,OP1098,Operator_1098,Active,SLEEVE NOTCH,Lockstitch,83.71,115
+Line-4,A,Night,Helper,OP1098,Operator_1098,Active,TROUSER FRONT JOINING,Flatbed,70.61,84
+Line-4,C,Day,Helper,OP1098,Operator_1098,Active,SHOULDER TAPE,Lockstitch,90.02,55
+Line-4,A,Night,Helper,OP1098,Operator_1098,Active,BOTTOM HEMMING,Overlock,72.73,73
+Line-4,B,Day,Helper,OP1098,Operator_1098,Active,POCKET ATTACH,Lockstitch,84.87,88
+Line-4,A,Day,Supervisor,OP1099,Operator_1099,Active,SHOULDER TAPE,Lockstitch,72.61,84
+Line-4,A,Day,Supervisor,OP1099,Operator_1099,Active,SHOULDER JOINING,Overlock,88.45,130
+Line-4,B,Night,Supervisor,OP1099,Operator_1099,Active,QUALITY CHECK,Flatbed,83.52,66
+Line-4,A,Day,Supervisor,OP1099,Operator_1099,Active,2ND SIDESEAM WITH LABEL,Flatbed,71.76,111
+Line-4,B,Day,Supervisor,OP1099,Operator_1099,Active,SIDE SEAM JOINING,Flatbed,83.81,120
+Line-4,A,Night,Supervisor,OP1099,Operator_1099,Active,TOP STITCH NECK,Overlock,84.64,141
+Line-4,A,Night,Operator,OP1100,Operator_1100,Active,NECK BINDING,Flatbed,91.45,112
+Line-4,A,Night,Operator,OP1100,Operator_1100,Active,POCKET ATTACH,Flatbed,70.63,139
+Line-4,C,Day,Operator,OP1100,Operator_1100,Active,2ND SIDESEAM WITH LABEL,Lockstitch,87.16,97
+Line-4,C,Day,Operator,OP1100,Operator_1100,Active,PRESSING,Lockstitch,89.26,108
+Line-4,A,Day,Operator,OP1100,Operator_1100,Active,1ST SIDESEAM,Overlock,80.99,111
+Line-4,C,Night,Operator,OP1100,Operator_1100,Active,SLEEVE ATTACH,Lockstitch,92.16,68
+Line-4,B,Night,Operator,OP1101,Operator_1101,Active,TACK - BTK,Overlock,73.51,120
+Line-4,B,Night,Operator,OP1101,Operator_1101,Active,TOP STITCH NECK,Overlock,72.23,92
+Line-4,A,Night,Operator,OP1101,Operator_1101,Active,WAISTBAND ATTACH,Flatbed,83.5,61
+Line-4,C,Night,Operator,OP1101,Operator_1101,Active,TAPE ATTACH,Lockstitch,94.51,132
+Line-4,A,Day,Operator,OP1101,Operator_1101,Active,HELPER,Flatbed,72.12,86
+Line-4,C,Night,Operator,OP1101,Operator_1101,Active,SLEEVE NOTCH,Lockstitch,78.52,122
+Line-4,B,Day,Supervisor,OP1102,Operator_1102,Active,PACKING,Flatbed,81.6,74
+Line-4,C,Day,Supervisor,OP1102,Operator_1102,Active,1ST SIDESEAM,Flatbed,78.3,139
+Line-4,C,Day,Supervisor,OP1102,Operator_1102,Active,LABEL ATTACH,Lockstitch,80.33,133
+Line-4,B,Day,Supervisor,OP1102,Operator_1102,Active,TOP STITCH NECK,Lockstitch,88.25,107
+Line-4,A,Day,Supervisor,OP1102,Operator_1102,Active,ARM HOLE TACKING,Flatbed,89.6,105
+Line-4,B,Day,Supervisor,OP1102,Operator_1102,Active,SLEEVE HEM,Flatbed,75.83,142
+Line-4,A,Night,Helper,OP1103,Operator_1103,Active,HELPER,Overlock,86.09,83
+Line-4,C,Night,Helper,OP1103,Operator_1103,Active,BACK PART PICKING,Lockstitch,74.9,88
+Line-4,A,Night,Helper,OP1103,Operator_1103,Active,PRESSING,Overlock,78.63,72
+Line-4,A,Night,Helper,OP1103,Operator_1103,Active,SLEEVE NOTCH,Overlock,90.84,79
+Line-4,B,Day,Helper,OP1103,Operator_1103,Active,NECK BINDING,Overlock,94.48,56
+Line-4,A,Night,Helper,OP1103,Operator_1103,Active,SNAP BUTTON ATTACH,Overlock,84.55,126
+Line-4,C,Day,Operator,OP1104,Operator_1104,Active,NECK BINDING,Flatbed,93.9,64
+Line-4,C,Night,Operator,OP1104,Operator_1104,Active,2ND SIDESEAM WITH LABEL,Lockstitch,85.58,50
+Line-4,B,Day,Operator,OP1104,Operator_1104,Active,TACK - BTK,Lockstitch,94.95,144
+Line-4,A,Day,Operator,OP1104,Operator_1104,Active,TROUSER BACK JOINING,Overlock,93.82,75
+Line-4,B,Night,Operator,OP1104,Operator_1104,Active,PRE/DART OL,Lockstitch,84.14,51
+Line-4,C,Day,Operator,OP1104,Operator_1104,Active,BACK PART PICKING,Flatbed,81.19,114
+Line-4,B,Day,Helper,OP1105,Operator_1105,Active,LABEL ATTACH,Overlock,91.54,61
+Line-4,B,Day,Helper,OP1105,Operator_1105,Active,TROUSER FRONT JOINING,Overlock,71.24,93
+Line-4,B,Night,Helper,OP1105,Operator_1105,Active,NECK BINDING,Overlock,76.61,57
+Line-4,A,Day,Helper,OP1105,Operator_1105,Active,BOTTOM BINDING,Overlock,79.29,69
+Line-4,A,Night,Helper,OP1105,Operator_1105,Active,WAISTBAND ATTACH,Lockstitch,79.51,66
+Line-4,B,Night,Helper,OP1105,Operator_1105,Active,PACKING,Flatbed,89.05,134
+Line-4,C,Night,Operator,OP1106,Operator_1106,Active,NECK BINDING,Overlock,91.56,73
+Line-4,B,Day,Operator,OP1106,Operator_1106,Active,HEATSEAL,Overlock,74.56,116
+Line-4,C,Day,Operator,OP1106,Operator_1106,Active,TACK - BTK,Overlock,79.98,56
+Line-4,A,Day,Operator,OP1106,Operator_1106,Active,TROUSER BACK JOINING,Overlock,87.07,93
+Line-4,C,Day,Operator,OP1106,Operator_1106,Active,SNAP BUTTON ATTACH,Flatbed,88.12,143
+Line-4,C,Night,Operator,OP1106,Operator_1106,Active,BACK PART PICKING,Flatbed,78.39,83
+Line-4,B,Night,Helper,OP1107,Operator_1107,Active,WAISTBAND ATTACH,Flatbed,74.1,149
+Line-4,A,Day,Helper,OP1107,Operator_1107,Active,SHOULDER JOINING,Overlock,73.66,52
+Line-4,C,Night,Helper,OP1107,Operator_1107,Active,TAPE ATTACH,Lockstitch,86.09,72
+Line-4,B,Day,Helper,OP1107,Operator_1107,Active,PRESSING,Flatbed,93.25,127
+Line-4,C,Day,Helper,OP1107,Operator_1107,Active,PRE/DART OL,Flatbed,72.67,150
+Line-4,C,Night,Helper,OP1107,Operator_1107,Active,COLLAR ATTACH,Overlock,75.9,144
+Line-4,B,Day,Operator,OP1108,Operator_1108,Active,TROUSER FRONT JOINING,Flatbed,86.52,138
+Line-4,B,Day,Operator,OP1108,Operator_1108,Active,SIDE SEAM JOINING,Overlock,92.41,60
+Line-4,C,Day,Operator,OP1108,Operator_1108,Active,NECK BINDING,Flatbed,93.44,144
+Line-4,A,Day,Operator,OP1108,Operator_1108,Active,PRE/DART OL,Flatbed,82.8,51
+Line-4,C,Night,Operator,OP1108,Operator_1108,Active,PRESSING,Lockstitch,74.2,131
+Line-4,B,Day,Operator,OP1108,Operator_1108,Active,LABEL ATTACH,Lockstitch,70.72,127
+Line-4,A,Day,Helper,OP1109,Operator_1109,Active,QUALITY CHECK,Lockstitch,74.91,69
+Line-4,B,Night,Helper,OP1109,Operator_1109,Active,TROUSER FRONT JOINING,Flatbed,81.37,98
+Line-4,B,Day,Helper,OP1109,Operator_1109,Active,SHOULDER JOINING,Flatbed,82.66,148
+Line-4,B,Night,Helper,OP1109,Operator_1109,Active,SLEEVE ATTACH,Overlock,84.63,92
+Line-4,A,Day,Helper,OP1109,Operator_1109,Active,SLEEVE NOTCH,Flatbed,83.11,51
+Line-4,C,Day,Helper,OP1109,Operator_1109,Active,2ND SIDESEAM WITH LABEL,Lockstitch,83.65,92
+Line-4,A,Day,Supervisor,OP1110,Operator_1110,Active,BOTTOM BINDING,Flatbed,89.99,93
+Line-4,C,Night,Supervisor,OP1110,Operator_1110,Active,SLEEVE NOTCH,Flatbed,85.71,86
+Line-4,A,Day,Supervisor,OP1110,Operator_1110,Active,SHOULDER TAPE,Lockstitch,74.43,119
+Line-4,C,Night,Supervisor,OP1110,Operator_1110,Active,SIDE SEAM JOINING,Flatbed,80.93,148
+Line-4,A,Night,Supervisor,OP1110,Operator_1110,Active,SNAP BUTTON ATTACH,Overlock,78.11,61
+Line-4,A,Night,Supervisor,OP1110,Operator_1110,Active,TOP STITCH NECK,Flatbed,79.67,73
+Line-4,B,Day,Helper,OP1111,Operator_1111,Active,2ND SIDESEAM WITH LABEL,Overlock,85.44,130
+Line-4,C,Night,Helper,OP1111,Operator_1111,Active,BOTTOM HEMMING,Lockstitch,84.75,128
+Line-4,C,Day,Helper,OP1111,Operator_1111,Active,TROUSER FRONT JOINING,Flatbed,81.66,113
+Line-4,A,Night,Helper,OP1111,Operator_1111,Active,PACKING,Overlock,74.7,145
+Line-4,C,Night,Helper,OP1111,Operator_1111,Active,LABEL ATTACH,Overlock,74.91,145
+Line-4,C,Night,Helper,OP1111,Operator_1111,Active,TACK - BTK,Lockstitch,78.7,80
+Line-4,B,Night,Supervisor,OP1112,Operator_1112,Active,TACK - BTK,Overlock,84.3,84
+Line-4,C,Night,Supervisor,OP1112,Operator_1112,Active,PRESSING,Overlock,73.72,92
+Line-4,A,Night,Supervisor,OP1112,Operator_1112,Active,SNAP BUTTON ATTACH,Flatbed,81.75,72
+Line-4,C,Day,Supervisor,OP1112,Operator_1112,Active,TROUSER FRONT JOINING,Lockstitch,80.74,87
+Line-4,A,Day,Supervisor,OP1112,Operator_1112,Active,NECK BINDING,Flatbed,83.96,99
+Line-4,A,Night,Supervisor,OP1112,Operator_1112,Active,2ND SIDESEAM WITH LABEL,Flatbed,89.24,66
+Line-4,B,Night,Operator,OP1113,Operator_1113,Active,TROUSER FRONT JOINING,Lockstitch,70.28,59
+Line-4,A,Night,Operator,OP1113,Operator_1113,Active,WAISTBAND ATTACH,Overlock,73.03,58
+Line-4,B,Night,Operator,OP1113,Operator_1113,Active,TROUSER BACK JOINING,Overlock,79.0,72
+Line-4,B,Day,Operator,OP1113,Operator_1113,Active,SLEEVE ATTACH,Overlock,75.36,134
+Line-4,B,Night,Operator,OP1113,Operator_1113,Active,ARM HOLE TACKING,Lockstitch,78.14,125
+Line-4,A,Day,Operator,OP1113,Operator_1113,Active,QUALITY CHECK,Flatbed,91.87,103
+Line-4,A,Night,Operator,OP1114,Operator_1114,Active,SHOULDER JOINING,Flatbed,88.1,131
+Line-4,B,Day,Operator,OP1114,Operator_1114,Active,TROUSER FRONT JOINING,Overlock,75.14,135
+Line-4,B,Day,Operator,OP1114,Operator_1114,Active,COLLAR ATTACH,Overlock,89.06,143
+Line-4,A,Day,Operator,OP1114,Operator_1114,Active,HELPER,Overlock,88.54,58
+Line-4,A,Day,Operator,OP1114,Operator_1114,Active,BACK PART PICKING,Flatbed,89.14,126
+Line-4,B,Night,Operator,OP1114,Operator_1114,Active,HEATSEAL,Overlock,75.96,118
+Line-4,B,Night,Supervisor,OP1115,Operator_1115,Active,TROUSER BACK JOINING,Flatbed,72.21,87
+Line-4,A,Night,Supervisor,OP1115,Operator_1115,Active,HEATSEAL,Overlock,73.74,83
+Line-4,C,Night,Supervisor,OP1115,Operator_1115,Active,SIDE SEAM JOINING,Overlock,72.27,149
+Line-4,C,Day,Supervisor,OP1115,Operator_1115,Active,SHOULDER JOINING,Lockstitch,86.55,126
+Line-4,C,Day,Supervisor,OP1115,Operator_1115,Active,TAPE ATTACH,Lockstitch,71.22,88
+Line-4,C,Day,Supervisor,OP1115,Operator_1115,Active,LABEL ATTACH,Lockstitch,82.31,54
+Line-4,B,Night,Operator,OP1116,Operator_1116,Active,LABEL ATTACH,Flatbed,83.58,65
+Line-4,B,Night,Operator,OP1116,Operator_1116,Active,SLEEVE NOTCH,Flatbed,79.5,67
+Line-4,C,Day,Operator,OP1116,Operator_1116,Active,SLEEVE ATTACH,Lockstitch,74.83,98
+Line-4,B,Night,Operator,OP1116,Operator_1116,Active,TACK - BTK,Overlock,89.63,137
+Line-4,A,Night,Operator,OP1116,Operator_1116,Active,QUALITY CHECK,Lockstitch,82.62,115
+Line-4,B,Day,Operator,OP1116,Operator_1116,Active,BOTTOM HEMMING,Overlock,77.47,81
+Line-4,B,Night,Supervisor,OP1117,Operator_1117,Active,PACKING,Lockstitch,77.42,56
+Line-4,A,Day,Supervisor,OP1117,Operator_1117,Active,HEATSEAL,Flatbed,77.6,68
+Line-4,C,Day,Supervisor,OP1117,Operator_1117,Active,SLEEVE ATTACH,Overlock,83.9,69
+Line-4,A,Day,Supervisor,OP1117,Operator_1117,Active,BOTTOM HEMMING,Overlock,88.24,146
+Line-4,B,Night,Supervisor,OP1117,Operator_1117,Active,TROUSER BACK JOINING,Overlock,94.06,66
+Line-4,B,Night,Supervisor,OP1117,Operator_1117,Active,NECK BINDING,Overlock,85.33,139
+Line-4,B,Day,Helper,OP1118,Operator_1118,Active,TAPE ATTACH,Lockstitch,80.75,149
+Line-4,B,Day,Helper,OP1118,Operator_1118,Active,FRONT PART PICKING,Overlock,83.42,102
+Line-4,C,Night,Helper,OP1118,Operator_1118,Active,BOTTOM HEMMING,Overlock,75.91,99
+Line-4,B,Day,Helper,OP1118,Operator_1118,Active,PACKING,Lockstitch,72.19,130
+Line-4,C,Day,Helper,OP1118,Operator_1118,Active,SIDE SEAM JOINING,Overlock,71.99,92
+Line-4,C,Day,Helper,OP1118,Operator_1118,Active,ARM HOLE TACKING,Flatbed,90.45,132
+Line-4,B,Night,Helper,OP1119,Operator_1119,Active,FRONT PART PICKING,Flatbed,91.1,144
+Line-4,B,Night,Helper,OP1119,Operator_1119,Active,1ST SIDESEAM,Lockstitch,81.13,118
+Line-4,A,Day,Helper,OP1119,Operator_1119,Active,HELPER,Overlock,84.7,122
+Line-4,C,Night,Helper,OP1119,Operator_1119,Active,2ND SIDESEAM WITH LABEL,Overlock,78.16,88
+Line-4,B,Day,Helper,OP1119,Operator_1119,Active,PRE/DART OL,Overlock,70.93,107
+Line-4,C,Day,Helper,OP1119,Operator_1119,Active,TROUSER FRONT JOINING,Overlock,81.2,141
+Line-4,B,Night,Supervisor,OP1120,Operator_1120,Active,SLEEVE ATTACH,Flatbed,72.26,101
+Line-4,C,Day,Supervisor,OP1120,Operator_1120,Active,BACK PART PICKING,Overlock,83.05,122
+Line-4,B,Night,Supervisor,OP1120,Operator_1120,Active,COLLAR ATTACH,Overlock,79.36,147
+Line-4,B,Day,Supervisor,OP1120,Operator_1120,Active,SLEEVE NOTCH,Lockstitch,83.91,118
+Line-4,B,Day,Supervisor,OP1120,Operator_1120,Active,WAISTBAND ATTACH,Flatbed,88.69,57
+Line-4,B,Night,Supervisor,OP1120,Operator_1120,Active,ARM HOLE TACKING,Flatbed,88.1,106
+Line-5,B,Day,Supervisor,OP1121,Operator_1121,Active,SIDE SEAM JOINING,Lockstitch,73.66,77
+Line-5,C,Day,Supervisor,OP1121,Operator_1121,Active,SLEEVE HEM,Flatbed,81.87,149
+Line-5,C,Night,Supervisor,OP1121,Operator_1121,Active,LABEL ATTACH,Lockstitch,90.89,90
+Line-5,A,Night,Supervisor,OP1121,Operator_1121,Active,SLEEVE ATTACH,Flatbed,85.62,80
+Line-5,C,Night,Supervisor,OP1121,Operator_1121,Active,BOTTOM HEMMING,Lockstitch,90.27,71
+Line-5,B,Day,Supervisor,OP1121,Operator_1121,Active,HELPER,Overlock,93.87,62
+Line-5,A,Night,Helper,OP1122,Operator_1122,Active,SLEEVE HEM,Overlock,79.66,57
+Line-5,C,Night,Helper,OP1122,Operator_1122,Active,FRONT PART PICKING,Lockstitch,79.6,133
+Line-5,C,Night,Helper,OP1122,Operator_1122,Active,NECK BINDING,Lockstitch,82.04,125
+Line-5,B,Day,Helper,OP1122,Operator_1122,Active,HEATSEAL,Overlock,76.41,126
+Line-5,B,Night,Helper,OP1122,Operator_1122,Active,SLEEVE ATTACH,Overlock,78.85,100
+Line-5,C,Day,Helper,OP1122,Operator_1122,Active,SHOULDER JOINING,Flatbed,94.09,111
+Line-5,C,Night,Operator,OP1123,Operator_1123,Active,COLLAR ATTACH,Lockstitch,72.39,147
+Line-5,B,Day,Operator,OP1123,Operator_1123,Active,NECK BINDING,Lockstitch,88.61,87
+Line-5,B,Day,Operator,OP1123,Operator_1123,Active,TROUSER FRONT JOINING,Flatbed,73.29,128
+Line-5,C,Night,Operator,OP1123,Operator_1123,Active,SLEEVE ATTACH,Overlock,83.67,131
+Line-5,B,Day,Operator,OP1123,Operator_1123,Active,PACKING,Flatbed,73.09,77
+Line-5,B,Day,Operator,OP1123,Operator_1123,Active,WAISTBAND ATTACH,Lockstitch,75.68,118
+Line-5,A,Day,Helper,OP1124,Operator_1124,Active,1ST SIDESEAM,Flatbed,88.44,102
+Line-5,A,Night,Helper,OP1124,Operator_1124,Active,SLEEVE ATTACH,Overlock,90.84,104
+Line-5,A,Night,Helper,OP1124,Operator_1124,Active,LABEL ATTACH,Flatbed,77.75,98
+Line-5,C,Day,Helper,OP1124,Operator_1124,Active,TOP STITCH NECK,Lockstitch,73.01,85
+Line-5,A,Day,Helper,OP1124,Operator_1124,Active,BOTTOM HEMMING,Overlock,91.96,132
+Line-5,A,Night,Helper,OP1124,Operator_1124,Active,2ND SIDESEAM WITH LABEL,Flatbed,86.08,75
+Line-5,B,Day,Supervisor,OP1125,Operator_1125,Active,SNAP BUTTON ATTACH,Flatbed,79.57,64
+Line-5,C,Day,Supervisor,OP1125,Operator_1125,Active,BOTTOM HEMMING,Flatbed,89.51,135
+Line-5,C,Night,Supervisor,OP1125,Operator_1125,Active,POCKET ATTACH,Lockstitch,76.55,105
+Line-5,A,Day,Supervisor,OP1125,Operator_1125,Active,SHOULDER JOINING,Overlock,70.17,110
+Line-5,A,Night,Supervisor,OP1125,Operator_1125,Active,SHOULDER TAPE,Lockstitch,85.22,88
+Line-5,A,Day,Supervisor,OP1125,Operator_1125,Active,SLEEVE NOTCH,Overlock,72.01,80
+Line-5,B,Night,Supervisor,OP1126,Operator_1126,Active,PACKING,Overlock,82.68,132
+Line-5,B,Night,Supervisor,OP1126,Operator_1126,Active,WAISTBAND ATTACH,Lockstitch,78.39,88
+Line-5,B,Night,Supervisor,OP1126,Operator_1126,Active,TROUSER BACK JOINING,Flatbed,88.08,130
+Line-5,C,Night,Supervisor,OP1126,Operator_1126,Active,SLEEVE NOTCH,Overlock,94.11,67
+Line-5,A,Night,Supervisor,OP1126,Operator_1126,Active,PRE/DART OL,Flatbed,73.29,127
+Line-5,C,Night,Supervisor,OP1126,Operator_1126,Active,NECK BINDING,Flatbed,74.55,78
+Line-5,B,Night,Operator,OP1127,Operator_1127,Active,LABEL ATTACH,Overlock,94.62,81
+Line-5,B,Night,Operator,OP1127,Operator_1127,Active,SHOULDER TAPE,Flatbed,90.24,91
+Line-5,A,Night,Operator,OP1127,Operator_1127,Active,TROUSER BACK JOINING,Overlock,89.45,145
+Line-5,C,Night,Operator,OP1127,Operator_1127,Active,COLLAR ATTACH,Flatbed,87.39,98
+Line-5,C,Day,Operator,OP1127,Operator_1127,Active,POCKET ATTACH,Flatbed,86.0,91
+Line-5,C,Night,Operator,OP1127,Operator_1127,Active,PRE/DART OL,Lockstitch,84.77,71
+Line-5,A,Day,Supervisor,OP1128,Operator_1128,Active,SHOULDER JOINING,Flatbed,87.88,65
+Line-5,B,Day,Supervisor,OP1128,Operator_1128,Active,BOTTOM BINDING,Flatbed,81.15,99
+Line-5,B,Night,Supervisor,OP1128,Operator_1128,Active,TROUSER BACK JOINING,Overlock,75.36,98
+Line-5,A,Night,Supervisor,OP1128,Operator_1128,Active,TACK - BTK,Overlock,84.5,83
+Line-5,A,Day,Supervisor,OP1128,Operator_1128,Active,ARM HOLE TACKING,Overlock,91.74,92
+Line-5,B,Day,Supervisor,OP1128,Operator_1128,Active,PACKING,Lockstitch,81.48,144
+Line-5,C,Day,Supervisor,OP1129,Operator_1129,Active,HEATSEAL,Lockstitch,76.55,119
+Line-5,B,Night,Supervisor,OP1129,Operator_1129,Active,TAPE ATTACH,Flatbed,83.13,66
+Line-5,C,Day,Supervisor,OP1129,Operator_1129,Active,POCKET ATTACH,Overlock,76.41,137
+Line-5,B,Day,Supervisor,OP1129,Operator_1129,Active,WAISTBAND ATTACH,Lockstitch,91.87,139
+Line-5,B,Day,Supervisor,OP1129,Operator_1129,Active,SNAP BUTTON ATTACH,Overlock,75.7,90
+Line-5,B,Night,Supervisor,OP1129,Operator_1129,Active,TACK - BTK,Overlock,74.66,124
+Line-5,B,Night,Helper,OP1130,Operator_1130,Active,NECK BINDING,Overlock,90.28,54
+Line-5,A,Night,Helper,OP1130,Operator_1130,Active,TROUSER BACK JOINING,Flatbed,90.46,62
+Line-5,C,Night,Helper,OP1130,Operator_1130,Active,TAPE ATTACH,Lockstitch,72.22,108
+Line-5,C,Night,Helper,OP1130,Operator_1130,Active,PRE/DART OL,Flatbed,90.35,146
+Line-5,C,Night,Helper,OP1130,Operator_1130,Active,COLLAR ATTACH,Overlock,70.15,81
+Line-5,C,Night,Helper,OP1130,Operator_1130,Active,BOTTOM BINDING,Flatbed,81.6,140
+Line-5,B,Night,Helper,OP1131,Operator_1131,Active,WAISTBAND ATTACH,Lockstitch,83.4,145
+Line-5,A,Night,Helper,OP1131,Operator_1131,Active,COLLAR ATTACH,Overlock,94.33,117
+Line-5,B,Day,Helper,OP1131,Operator_1131,Active,PRE/DART OL,Lockstitch,72.15,52
+Line-5,A,Night,Helper,OP1131,Operator_1131,Active,PACKING,Lockstitch,77.94,53
+Line-5,C,Day,Helper,OP1131,Operator_1131,Active,TOP STITCH NECK,Lockstitch,78.35,123
+Line-5,A,Day,Helper,OP1131,Operator_1131,Active,FRONT PART PICKING,Flatbed,85.26,66
+Line-5,B,Night,Helper,OP1132,Operator_1132,Active,SLEEVE NOTCH,Flatbed,72.36,104
+Line-5,A,Night,Helper,OP1132,Operator_1132,Active,PRESSING,Lockstitch,91.03,96
+Line-5,A,Night,Helper,OP1132,Operator_1132,Active,NECK BINDING,Flatbed,94.06,79
+Line-5,B,Day,Helper,OP1132,Operator_1132,Active,FRONT PART PICKING,Overlock,72.28,98
+Line-5,C,Day,Helper,OP1132,Operator_1132,Active,TROUSER BACK JOINING,Flatbed,90.79,82
+Line-5,A,Night,Helper,OP1132,Operator_1132,Active,TACK - BTK,Overlock,72.91,147
+Line-5,A,Night,Supervisor,OP1133,Operator_1133,Active,PRE/DART OL,Overlock,73.9,119
+Line-5,A,Night,Supervisor,OP1133,Operator_1133,Active,NECK BINDING,Flatbed,74.52,138
+Line-5,C,Night,Supervisor,OP1133,Operator_1133,Active,TOP STITCH NECK,Lockstitch,80.29,59
+Line-5,C,Night,Supervisor,OP1133,Operator_1133,Active,SLEEVE ATTACH,Flatbed,89.1,108
+Line-5,B,Day,Supervisor,OP1133,Operator_1133,Active,BACK PART PICKING,Overlock,80.28,136
+Line-5,B,Night,Supervisor,OP1133,Operator_1133,Active,SIDE SEAM JOINING,Lockstitch,70.83,84
+Line-5,B,Day,Supervisor,OP1134,Operator_1134,Active,BACK PART PICKING,Flatbed,77.88,50
+Line-5,B,Day,Supervisor,OP1134,Operator_1134,Active,POCKET ATTACH,Flatbed,77.61,77
+Line-5,C,Night,Supervisor,OP1134,Operator_1134,Active,FRONT PART PICKING,Lockstitch,85.55,123
+Line-5,C,Day,Supervisor,OP1134,Operator_1134,Active,SHOULDER TAPE,Overlock,76.04,116
+Line-5,B,Night,Supervisor,OP1134,Operator_1134,Active,BOTTOM BINDING,Lockstitch,70.79,78
+Line-5,A,Day,Supervisor,OP1134,Operator_1134,Active,TOP STITCH NECK,Lockstitch,83.38,116
+Line-5,A,Day,Operator,OP1135,Operator_1135,Active,COLLAR ATTACH,Overlock,76.84,110
+Line-5,A,Day,Operator,OP1135,Operator_1135,Active,SHOULDER JOINING,Lockstitch,78.43,67
+Line-5,A,Night,Operator,OP1135,Operator_1135,Active,PRE/DART OL,Flatbed,84.77,136
+Line-5,C,Day,Operator,OP1135,Operator_1135,Active,QUALITY CHECK,Lockstitch,78.41,92
+Line-5,C,Night,Operator,OP1135,Operator_1135,Active,TROUSER BACK JOINING,Flatbed,73.64,79
+Line-5,A,Day,Operator,OP1135,Operator_1135,Active,TROUSER FRONT JOINING,Overlock,90.16,90
+Line-5,C,Night,Supervisor,OP1136,Operator_1136,Active,1ST SIDESEAM,Lockstitch,76.24,122
+Line-5,B,Night,Supervisor,OP1136,Operator_1136,Active,SLEEVE ATTACH,Lockstitch,88.42,113
+Line-5,C,Night,Supervisor,OP1136,Operator_1136,Active,SHOULDER JOINING,Overlock,73.98,143
+Line-5,B,Day,Supervisor,OP1136,Operator_1136,Active,POCKET ATTACH,Lockstitch,94.94,81
+Line-5,A,Night,Supervisor,OP1136,Operator_1136,Active,ARM HOLE TACKING,Flatbed,81.81,79
+Line-5,C,Day,Supervisor,OP1136,Operator_1136,Active,WAISTBAND ATTACH,Lockstitch,80.37,67
+Line-5,B,Day,Helper,OP1137,Operator_1137,Active,PRESSING,Flatbed,94.74,120
+Line-5,B,Night,Helper,OP1137,Operator_1137,Active,BOTTOM HEMMING,Lockstitch,93.88,81
+Line-5,B,Day,Helper,OP1137,Operator_1137,Active,HEATSEAL,Overlock,79.44,81
+Line-5,A,Day,Helper,OP1137,Operator_1137,Active,2ND SIDESEAM WITH LABEL,Lockstitch,87.73,95
+Line-5,B,Night,Helper,OP1137,Operator_1137,Active,QUALITY CHECK,Lockstitch,83.46,95
+Line-5,A,Day,Helper,OP1137,Operator_1137,Active,TROUSER FRONT JOINING,Lockstitch,93.19,85
+Line-5,A,Day,Helper,OP1138,Operator_1138,Active,SLEEVE HEM,Flatbed,86.32,98
+Line-5,A,Night,Helper,OP1138,Operator_1138,Active,TAPE ATTACH,Lockstitch,92.9,75
+Line-5,A,Night,Helper,OP1138,Operator_1138,Active,SNAP BUTTON ATTACH,Overlock,83.43,59
+Line-5,B,Day,Helper,OP1138,Operator_1138,Active,2ND SIDESEAM WITH LABEL,Overlock,84.35,130
+Line-5,A,Day,Helper,OP1138,Operator_1138,Active,ARM HOLE TACKING,Flatbed,88.23,100
+Line-5,A,Night,Helper,OP1138,Operator_1138,Active,TROUSER BACK JOINING,Overlock,75.73,142
+Line-5,A,Day,Helper,OP1139,Operator_1139,Active,QUALITY CHECK,Flatbed,74.35,148
+Line-5,C,Night,Helper,OP1139,Operator_1139,Active,TAPE ATTACH,Flatbed,93.11,148
+Line-5,B,Night,Helper,OP1139,Operator_1139,Active,NECK BINDING,Flatbed,86.05,89
+Line-5,C,Night,Helper,OP1139,Operator_1139,Active,BOTTOM HEMMING,Flatbed,83.76,70
+Line-5,B,Night,Helper,OP1139,Operator_1139,Active,PACKING,Lockstitch,89.69,150
+Line-5,C,Day,Helper,OP1139,Operator_1139,Active,SIDE SEAM JOINING,Flatbed,76.84,93
+Line-5,A,Night,Supervisor,OP1140,Operator_1140,Active,PRE/DART OL,Overlock,93.97,135
+Line-5,A,Day,Supervisor,OP1140,Operator_1140,Active,BOTTOM BINDING,Lockstitch,71.79,63
+Line-5,B,Day,Supervisor,OP1140,Operator_1140,Active,TAPE ATTACH,Lockstitch,78.39,89
+Line-5,B,Day,Supervisor,OP1140,Operator_1140,Active,BOTTOM HEMMING,Lockstitch,79.45,77
+Line-5,B,Day,Supervisor,OP1140,Operator_1140,Active,BACK PART PICKING,Flatbed,77.43,75
+Line-5,C,Day,Supervisor,OP1140,Operator_1140,Active,PRESSING,Overlock,73.83,138
+Line-5,B,Day,Operator,OP1141,Operator_1141,Active,COLLAR ATTACH,Overlock,74.79,51
+Line-5,C,Night,Operator,OP1141,Operator_1141,Active,HELPER,Flatbed,71.8,91
+Line-5,B,Day,Operator,OP1141,Operator_1141,Active,WAISTBAND ATTACH,Flatbed,88.91,147
+Line-5,C,Night,Operator,OP1141,Operator_1141,Active,NECK BINDING,Overlock,70.73,76
+Line-5,C,Night,Operator,OP1141,Operator_1141,Active,PRE/DART OL,Overlock,90.84,143
+Line-5,C,Night,Operator,OP1141,Operator_1141,Active,TACK - BTK,Overlock,89.72,137
+Line-5,C,Day,Operator,OP1142,Operator_1142,Active,SLEEVE ATTACH,Flatbed,83.22,50
+Line-5,B,Night,Operator,OP1142,Operator_1142,Active,NECK BINDING,Overlock,89.1,85
+Line-5,A,Day,Operator,OP1142,Operator_1142,Active,BOTTOM HEMMING,Overlock,78.94,132
+Line-5,B,Day,Operator,OP1142,Operator_1142,Active,COLLAR ATTACH,Flatbed,83.68,74
+Line-5,C,Day,Operator,OP1142,Operator_1142,Active,PRE/DART OL,Lockstitch,74.65,56
+Line-5,B,Day,Operator,OP1142,Operator_1142,Active,LABEL ATTACH,Lockstitch,87.93,114
+Line-5,C,Day,Supervisor,OP1143,Operator_1143,Active,2ND SIDESEAM WITH LABEL,Flatbed,76.84,57
+Line-5,B,Day,Supervisor,OP1143,Operator_1143,Active,FRONT PART PICKING,Flatbed,73.16,144
+Line-5,B,Day,Supervisor,OP1143,Operator_1143,Active,LABEL ATTACH,Overlock,80.6,137
+Line-5,C,Night,Supervisor,OP1143,Operator_1143,Active,WAISTBAND ATTACH,Overlock,90.85,118
+Line-5,A,Day,Supervisor,OP1143,Operator_1143,Active,TROUSER FRONT JOINING,Lockstitch,92.0,131
+Line-5,C,Day,Supervisor,OP1143,Operator_1143,Active,NECK BINDING,Overlock,82.51,139
+Line-5,A,Day,Operator,OP1144,Operator_1144,Active,TOP STITCH NECK,Flatbed,80.07,111
+Line-5,C,Night,Operator,OP1144,Operator_1144,Active,ARM HOLE TACKING,Flatbed,78.44,140
+Line-5,A,Night,Operator,OP1144,Operator_1144,Active,1ST SIDESEAM,Overlock,87.88,146
+Line-5,A,Day,Operator,OP1144,Operator_1144,Active,PACKING,Overlock,76.07,114
+Line-5,A,Night,Operator,OP1144,Operator_1144,Active,HELPER,Overlock,83.94,130
+Line-5,B,Day,Operator,OP1144,Operator_1144,Active,NECK BINDING,Lockstitch,83.32,68
+Line-5,C,Night,Helper,OP1145,Operator_1145,Active,SNAP BUTTON ATTACH,Overlock,92.2,82
+Line-5,B,Day,Helper,OP1145,Operator_1145,Active,HEATSEAL,Lockstitch,70.78,131
+Line-5,C,Day,Helper,OP1145,Operator_1145,Active,POCKET ATTACH,Overlock,91.81,109
+Line-5,B,Night,Helper,OP1145,Operator_1145,Active,1ST SIDESEAM,Overlock,85.23,75
+Line-5,C,Night,Helper,OP1145,Operator_1145,Active,PRE/DART OL,Overlock,84.85,94
+Line-5,C,Night,Helper,OP1145,Operator_1145,Active,SLEEVE NOTCH,Overlock,87.13,128
+Line-5,C,Day,Helper,OP1146,Operator_1146,Active,TAPE ATTACH,Lockstitch,92.02,116
+Line-5,B,Day,Helper,OP1146,Operator_1146,Active,TACK - BTK,Flatbed,81.42,112
+Line-5,B,Night,Helper,OP1146,Operator_1146,Active,FRONT PART PICKING,Overlock,83.1,72
+Line-5,B,Night,Helper,OP1146,Operator_1146,Active,BACK PART PICKING,Flatbed,74.64,137
+Line-5,C,Night,Helper,OP1146,Operator_1146,Active,ARM HOLE TACKING,Overlock,94.68,93
+Line-5,B,Night,Helper,OP1146,Operator_1146,Active,SLEEVE NOTCH,Lockstitch,72.8,143
+Line-5,C,Night,Supervisor,OP1147,Operator_1147,Active,WAISTBAND ATTACH,Lockstitch,93.79,120
+Line-5,B,Night,Supervisor,OP1147,Operator_1147,Active,TROUSER FRONT JOINING,Lockstitch,75.08,138
+Line-5,C,Night,Supervisor,OP1147,Operator_1147,Active,TACK - BTK,Lockstitch,86.08,53
+Line-5,A,Night,Supervisor,OP1147,Operator_1147,Active,SNAP BUTTON ATTACH,Lockstitch,85.19,135
+Line-5,A,Day,Supervisor,OP1147,Operator_1147,Active,PRE/DART OL,Overlock,86.08,56
+Line-5,B,Day,Supervisor,OP1147,Operator_1147,Active,HELPER,Lockstitch,80.52,77
+Line-5,C,Day,Supervisor,OP1148,Operator_1148,Active,COLLAR ATTACH,Overlock,75.41,148
+Line-5,C,Day,Supervisor,OP1148,Operator_1148,Active,TROUSER BACK JOINING,Flatbed,73.14,124
+Line-5,A,Night,Supervisor,OP1148,Operator_1148,Active,PACKING,Lockstitch,94.64,118
+Line-5,B,Day,Supervisor,OP1148,Operator_1148,Active,HELPER,Overlock,74.7,146
+Line-5,A,Day,Supervisor,OP1148,Operator_1148,Active,PRESSING,Lockstitch,73.32,122
+Line-5,C,Night,Supervisor,OP1148,Operator_1148,Active,TAPE ATTACH,Flatbed,88.31,56
+Line-5,B,Night,Operator,OP1149,Operator_1149,Active,HEATSEAL,Lockstitch,75.55,88
+Line-5,B,Night,Operator,OP1149,Operator_1149,Active,FRONT PART PICKING,Flatbed,77.74,141
+Line-5,B,Day,Operator,OP1149,Operator_1149,Active,SIDE SEAM JOINING,Overlock,87.66,100
+Line-5,C,Night,Operator,OP1149,Operator_1149,Active,TACK - BTK,Lockstitch,84.07,90
+Line-5,B,Day,Operator,OP1149,Operator_1149,Active,SNAP BUTTON ATTACH,Lockstitch,77.28,110
+Line-5,A,Day,Operator,OP1149,Operator_1149,Active,SLEEVE HEM,Overlock,93.33,72
+Line-5,A,Day,Operator,OP1150,Operator_1150,Active,BOTTOM HEMMING,Overlock,76.76,112
+Line-5,C,Night,Operator,OP1150,Operator_1150,Active,TROUSER FRONT JOINING,Lockstitch,81.84,72
+Line-5,B,Day,Operator,OP1150,Operator_1150,Active,BACK PART PICKING,Flatbed,72.76,111
+Line-5,A,Night,Operator,OP1150,Operator_1150,Active,FRONT PART PICKING,Flatbed,80.36,60
+Line-5,B,Day,Operator,OP1150,Operator_1150,Active,2ND SIDESEAM WITH LABEL,Overlock,80.69,71
+Line-5,A,Day,Operator,OP1150,Operator_1150,Active,ARM HOLE TACKING,Overlock,93.96,77

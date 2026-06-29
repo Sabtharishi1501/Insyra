@@ -1,0 +1,11 @@
+# Install: pip install -r requirements.txt
+
+smolagents
+litellm
+pandas
+numpy
+matplotlib
+seaborn
+rich
+python-dotenv
+streamlit
