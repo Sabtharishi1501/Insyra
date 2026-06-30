@@ -16,7 +16,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 os.environ.setdefault("GEMINI_API_KEY", "test-key-not-real")
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
 def _sample_df() -> pd.DataFrame:
     return pd.DataFrame({
         "name":   ["Alice", "Bob", "Carol", "Dave"],
@@ -53,7 +52,6 @@ def _fake_llm_call(messages, temperature=0.1):
     return FAKE_INTERP
 
 
-# ── Mock CodeAgent that succeeds ──────────────────────────────────────────────
 class MockCodeAgentSuccess:
     def __init__(self, *args, **kwargs):
         self.memory = MagicMock()
@@ -67,7 +65,6 @@ class MockCodeAgentSuccess:
         return FAKE_AGENT_LOGS
 
 
-# ── Mock CodeAgent that always fails ─────────────────────────────────────────
 class MockCodeAgentFail:
     def __init__(self, *args, **kwargs):
         self.memory = MagicMock()
@@ -81,7 +78,6 @@ class MockCodeAgentFail:
         raise RuntimeError("simulated CodeAgent failure")
 
 
-# ── Mock CodeAgent that fails then succeeds ───────────────────────────────────
 _attempt_counter = {"n": 0}
 
 class MockCodeAgentRetry:
@@ -113,7 +109,6 @@ class TestSchemaString(unittest.TestCase):
     def test_schema_shows_categorical_values(self):
         agent  = _make_agent()
         schema = agent._schema_str()
-        # Low-cardinality string cols should show [values: ...]
         self.assertIn("values:", schema)
         self.assertIn("Day",   schema)
         self.assertIn("Night", schema)
