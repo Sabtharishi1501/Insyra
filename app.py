@@ -1,5 +1,5 @@
 """
-app.py – Streamlit UI for CSV Insight Analyzer
+app.py – Streamlit UI for Insyra
 ------------------------------------------------
 Run:  streamlit run app.py
       (main.py must be in the same folder)
@@ -30,7 +30,7 @@ except Exception as e:
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="CSV Insight Analyzer",
+    page_title="Insyra",
     page_icon="🔬",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -99,7 +99,41 @@ st.markdown("""
     border-radius: 8px !important;
   }
 
-  /* ── Buttons ── */
+  /* ── Buttons (primary = violet, e.g. Run / Quick starters) ── */
+  .stButton > button[kind="primary"],
+  .stButton > button[data-testid="baseButton-primary"] {
+    background: #7c3aed !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 1.4rem !important;
+    transition: background 0.2s;
+  }
+  .stButton > button[kind="primary"]:hover,
+  .stButton > button[data-testid="baseButton-primary"]:hover { background: #6d28d9 !important; }
+
+  /* ── Buttons (secondary = neutral, e.g. the ✕ remove-file button) ── */
+  .stButton > button[kind="secondary"],
+  .stButton > button[data-testid="baseButton-secondary"] {
+    background: #2a2d3a !important;
+    color: #c4c4cc !important;
+    border: 1px solid #3a3d4a !important;
+    border-radius: 8px !important;
+    font-family: 'IBM Plex Mono', monospace !important;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 1rem !important;
+    transition: background 0.2s;
+  }
+  .stButton > button[kind="secondary"]:hover,
+  .stButton > button[data-testid="baseButton-secondary"]:hover {
+    background: #3a3d4a !important;
+    color: #f87171 !important;
+    border-color: #f87171 !important;
+  }
+
+  /* ── Buttons (default/no type set, e.g. Quick starters, Clear history) ── */
   .stButton > button {
     background: #7c3aed !important;
     color: white !important;
@@ -136,20 +170,42 @@ st.markdown("""
     font-size: 0.85rem;
   }
   .history-item:last-child { border-bottom: none; }
+
+  /* ── Hide native file-uploader preview cards ──
+       We render our own styled file chips in "Loaded DataFrames" instead,
+       so the default Streamlit thumbnail/remove card is redundant. */
+  [data-testid="stFileUploaderFile"] {
+    display: none !important;
+  }
+  [data-testid="stFileUploaderFileName"] {
+    display: none !important;
+  }
 </style>
 """, unsafe_allow_html=True)
 
 
 # ── Session state defaults ────────────────────────────────────────────────────
 for key, val in {
-    "all_dfs":   {},
-    "metadata":  {},
-    "history":   [],       # list of result dicts
-    "agent":     None,
-    "api_ok":    False,
+    "all_dfs":            {},
+    "metadata":           {},
+    "file_names":         {},       # maps df key -> original uploaded filename
+    "history":            [],       # list of result dicts
+    "agent":              None,
+    "api_ok":             False,
+    "goal_input_value":   "",       # bound to the question text_area
+    "clear_goal_pending": False,    # set True after a run; consumed BEFORE the widget renders
 }.items():
     if key not in st.session_state:
         st.session_state[key] = val
+
+# Streamlit forbids writing to a widget-bound session_state key after that
+# widget has already been instantiated in the script. So instead of clearing
+# goal_input_value right after agent.run() (too late — the widget already
+# rendered earlier in that same run), we set a flag there and consume it here,
+# BEFORE st.text_area(key="goal_input_value") is created below.
+if st.session_state.clear_goal_pending:
+    st.session_state.goal_input_value = ""
+    st.session_state.clear_goal_pending = False
 
 
 # ── Lazy agent import (after .env is loaded) ──────────────────────────────────
@@ -164,10 +220,10 @@ def get_agent():
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.markdown("## 🔬 CSV Insight")
+    st.markdown("## 🔬 Insyra")
     st.markdown("---")
 
-    # API key check (silent – no badge shown)
+    # API key check (silent – no badge or divider shown when key is already set)
     api_key = os.getenv("GEMINI_API_KEY", "")
     if api_key:
         st.session_state.api_ok = True
@@ -176,43 +232,88 @@ with st.sidebar:
         if manual_key:
             os.environ["GEMINI_API_KEY"] = manual_key
             st.session_state.api_ok = True
+        st.markdown("---")
 
-    st.markdown("---")
     st.markdown("### 📂 Upload CSVs")
     st.caption("Up to 3 files")
 
-    uploaded = st.file_uploader(
-        "Choose CSV files",
-        type=["csv"],
-        accept_multiple_files=True,
-        label_visibility="collapsed",
-    )
+    # ── Track up to 3 individual file slots ───────────────────────────────────
+    if "csv_slots" not in st.session_state:
+        st.session_state.csv_slots = [None, None, None]   # each holds an UploadedFile or None
+    if "uploader_gen" not in st.session_state:
+        st.session_state.uploader_gen = 0   # bump this to force a fresh uploader widget
 
-    if uploaded:
-        new_dfs, new_meta = {}, {}
-        for i, f in enumerate(uploaded[:3]):
+    n_filled = sum(1 for s in st.session_state.csv_slots if s is not None)
+
+    if n_filled < 3:
+        label = "Upload" if n_filled == 0 else "Upload more"
+        # Key includes both the slot index AND a generation counter.
+        # Bumping uploader_gen after each successful upload forces Streamlit
+        # to mount a brand-new widget instance instead of reusing one that
+        # still holds the previously-selected file internally.
+        uploader_key = f"slot_uploader_{n_filled}_{st.session_state.uploader_gen}"
+        new_file = st.file_uploader(
+            label,
+            type=["csv"],
+            accept_multiple_files=False,
+            key=uploader_key,
+        )
+        if new_file is not None:
+            st.session_state.csv_slots[n_filled] = new_file
+            st.session_state.uploader_gen += 1   # force fresh widget on next rerun
+            st.rerun()
+
+    # ── Rebuild all_dfs from filled slots whenever slots change ───────────────
+    filled_files = [f for f in st.session_state.csv_slots if f is not None]
+    if filled_files:
+        new_dfs, new_meta, new_names = {}, {}, {}
+        read_error = None
+        for i, f in enumerate(filled_files):
             key = "data" if i == 0 else f"data{i+1}"
-            df  = pd.read_csv(f)
-            new_dfs[key]  = df
-            new_meta[key] = {c: str(t) for c, t in df.dtypes.items()}
+            f.seek(0)   # UploadedFile keeps its stream position across reruns — reset before reading
+            try:
+                df = pd.read_csv(f)
+            except pd.errors.EmptyDataError:
+                read_error = f"'{f.name}' appears to be empty — please upload a CSV with data."
+                break
+            new_dfs[key]   = df
+            new_meta[key]  = {c: str(t) for c, t in df.dtypes.items()}
+            new_names[key] = f.name
 
-        if set(new_dfs.keys()) != set(st.session_state.all_dfs.keys()):
-            st.session_state.all_dfs  = new_dfs
-            st.session_state.metadata = new_meta
-            st.session_state.history  = []
-            st.session_state.agent    = None
-            st.success(f"{len(new_dfs)} file(s) loaded.")
+        if read_error:
+            st.error(read_error)
+        elif set(new_dfs.keys()) != set(st.session_state.all_dfs.keys()):
+            st.session_state.all_dfs    = new_dfs
+            st.session_state.metadata   = new_meta
+            st.session_state.file_names = new_names
+            st.session_state.history    = []
+            st.session_state.agent      = None
 
     st.markdown("---")
     st.markdown("### 📊 Loaded DataFrames")
-    if st.session_state.all_dfs:
-        for name, df in st.session_state.all_dfs.items():
-            st.markdown(
-                f'<span class="chip">{name}</span>'
-                f'<span class="chip">{len(df):,} rows</span>'
-                f'<span class="chip">{len(df.columns)} cols</span>',
-                unsafe_allow_html=True,
-            )
+    if filled_files:
+        for i, f in enumerate(filled_files):
+            name = "data" if i == 0 else f"data{i+1}"
+            df   = st.session_state.all_dfs.get(name)
+            if df is None:
+                continue
+
+            row_col, btn_col = st.columns([5, 1])
+            with row_col:
+                st.markdown(f'📄 **{f.name}**', unsafe_allow_html=False)
+                st.markdown(
+                    f'<span class="chip">{len(df):,} rows</span>'
+                    f'<span class="chip">{len(df.columns)} cols</span>',
+                    unsafe_allow_html=True,
+                )
+            with btn_col:
+                if st.button("✕", key=f"remove_slot_{i}", type="primary"):
+                    st.session_state.csv_slots[i] = None
+                    # Compact remaining slots so there's no gap
+                    remaining = [s for s in st.session_state.csv_slots if s is not None]
+                    st.session_state.csv_slots = remaining + [None] * (3 - len(remaining))
+                    st.session_state.uploader_gen += 1   # ensure a fresh uploader widget
+                    st.rerun()
     else:
         st.caption("No files loaded yet.")
 
@@ -223,8 +324,7 @@ with st.sidebar:
 
 
 # ── Main layout ───────────────────────────────────────────────────────────────
-st.markdown("# CSV Insight Analyzer")
-st.markdown("*Natural-language data analysis powered by Gemini + smolagents*")
+st.markdown("# Insyra")
 st.markdown("---")
 
 # ── Data preview ─────────────────────────────────────────────────────────────
@@ -261,6 +361,7 @@ if st.session_state.all_dfs:
             placeholder="e.g. Show the top 5 products by revenue  |  Find missing values in each column  |  Correlation between Age and Salary",
             height=90,
             label_visibility="collapsed",
+            key="goal_input_value",
         )
     with col_btn:
         st.markdown("<br>", unsafe_allow_html=True)
@@ -275,20 +376,25 @@ if st.session_state.all_dfs:
         "Value counts for all categorical columns",
         "Descriptive statistics summary",
     ]
+    starter_clicked = None
     for qc, starter in zip(qcols, starters):
         if qc.button(starter, key=f"q_{starter}"):
-            goal = starter
-            run_btn = True
+            starter_clicked = starter
 
     # ── Run analysis ──────────────────────────────────────────────────────────
-    if run_btn and goal.strip():
+    # A starter button click runs immediately with its own text, bypassing
+    # whatever (if anything) is currently typed in the box.
+    run_goal = starter_clicked if starter_clicked else (goal.strip() if run_btn else None)
+
+    if run_goal:
         if not st.session_state.api_ok:
             st.error("Add your GEMINI_API_KEY to .env or paste it in the sidebar.")
         else:
             with st.spinner("🧠 Analyzing…"):
                 agent  = get_agent()
-                result = agent.run(goal.strip())
+                result = agent.run(run_goal)
                 st.session_state.history.insert(0, result)
+                st.session_state.clear_goal_pending = True   # consumed before the widget renders next run
                 st.rerun()
 
     st.markdown("---")
@@ -316,21 +422,22 @@ if st.session_state.all_dfs:
                         unsafe_allow_html=True,
                     )
 
-                    # ── Output file ───────────────────────────────────────────
+                    # ── Output file (only show if result is a real table) ──────
                     if res.get("output_file") and Path(res["output_file"]).exists():
                         out_path = Path(res["output_file"])
                         if out_path.suffix == ".csv":
                             out_df = pd.read_csv(out_path)
-                            st.markdown("**Output table** (`result.csv`)")
-                            st.dataframe(out_df, use_container_width=True)
-
-                            st.download_button(
-                                "⬇ Download result.csv",
-                                data=out_df.to_csv(index=False).encode(),
-                                file_name=f"result_{res['timestamp']}.csv",
-                                mime="text/csv",
-                                key=f"dl_{i}",
-                            )
+                            # Only render table if it has multiple rows (real tabular data)
+                            if len(out_df) > 1:
+                                st.markdown("**Output table** (`result.csv`)")
+                                st.dataframe(out_df, use_container_width=True)
+                                st.download_button(
+                                    "⬇ Download result.csv",
+                                    data=out_df.to_csv(index=False).encode(),
+                                    file_name=f"result_{res['timestamp']}.csv",
+                                    mime="text/csv",
+                                    key=f"dl_{i}",
+                                )
                         elif out_path.suffix in (".png", ".jpg", ".pdf"):
                             st.image(str(out_path), caption="Generated plot")
 

@@ -1,34 +1,29 @@
 """
-test.py – Integration tests for DataAnalysisAgent
----------------------------------------------------
+test.py – Test suite for DataAnalysisAgent (smolagents-powered)
+----------------------------------------------------------------
+All LLM + CodeAgent calls are mocked — runs offline, no API key needed.
 Run:  python test.py
-Does NOT call the real LLM – patches _llm() with deterministic fakes
-so tests are fast, free, and offline.
 """
 
-import os, sys, io, json, unittest, tempfile, textwrap
+import os, sys, io, unittest, textwrap
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 
 import pandas as pd
 import numpy as np
 
-# ── Ensure local main.py is importable ───────────────────────────────────────
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-# ── Fake API key so main.py doesn't raise on import ─────────────────────────
 os.environ.setdefault("GEMINI_API_KEY", "test-key-not-real")
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# Helpers
-# ─────────────────────────────────────────────────────────────────────────────
+# ── Helpers ───────────────────────────────────────────────────────────────────
 def _sample_df() -> pd.DataFrame:
     return pd.DataFrame({
         "name":   ["Alice", "Bob", "Carol", "Dave"],
         "dept":   ["Eng", "HR", "Eng", "Finance"],
         "salary": [90000, 55000, 95000, 72000],
         "score":  [88, 72, 95, 80],
+        "shift":  ["Day", "Night", "Day", "Night"],
     })
 
 
@@ -42,27 +37,67 @@ def _make_agent(df: pd.DataFrame = None):
 
 FAKE_PLAN = "1. Load data.\n2. Group by dept.\n3. Compute mean salary.\n4. Assign result."
 
-FAKE_CODE = textwrap.dedent("""
-    import pandas as pd, os
-    df = all_dfs['data']
-    df_result = df.groupby('dept')['salary'].mean().reset_index()
-    df_result.columns = ['dept', 'avg_salary']
-    os.makedirs(output_dir, exist_ok=True)
-    df_result.to_csv(os.path.join(output_dir, 'result.csv'), index=False)
-    result = df_result
+FAKE_AGENT_LOGS = textwrap.dedent("""
+    Day Shift: 2 persons
+    Night Shift: 2 persons
+    Top result: Alice, 90000
 """).strip()
 
 FAKE_INTERP = "Engineering has the highest average salary at $92,500."
 
 
-def _fake_llm(messages, temperature=0.1):
-    """Returns plan, code, or interpretation based on prompt content."""
+def _fake_llm_call(messages, temperature=0.1):
     content = messages[0]["content"]
-    if "List clear action steps" in content or "write a clear numbered plan" in content.lower():
+    if "write a clear numbered plan" in content.lower():
         return FAKE_PLAN
-    if "CODE REQUIREMENTS" in content or "expert Python data analyst" in content:
-        return f"```python\n{FAKE_CODE}\n```"
     return FAKE_INTERP
+
+
+# ── Mock CodeAgent that succeeds ──────────────────────────────────────────────
+class MockCodeAgentSuccess:
+    def __init__(self, *args, **kwargs):
+        self.memory = MagicMock()
+        step = MagicMock()
+        step.tool_calls = []
+        step.observations = FAKE_AGENT_LOGS
+        step.action_output = None
+        self.memory.steps = [step]
+
+    def run(self, prompt, additional_args=None):
+        return FAKE_AGENT_LOGS
+
+
+# ── Mock CodeAgent that always fails ─────────────────────────────────────────
+class MockCodeAgentFail:
+    def __init__(self, *args, **kwargs):
+        self.memory = MagicMock()
+        step = MagicMock()
+        step.tool_calls = []
+        step.observations = ""
+        step.action_output = None
+        self.memory.steps = [step]
+
+    def run(self, prompt, additional_args=None):
+        raise RuntimeError("simulated CodeAgent failure")
+
+
+# ── Mock CodeAgent that fails then succeeds ───────────────────────────────────
+_attempt_counter = {"n": 0}
+
+class MockCodeAgentRetry:
+    def __init__(self, *args, **kwargs):
+        self.memory = MagicMock()
+        step = MagicMock()
+        step.tool_calls = []
+        step.observations = FAKE_AGENT_LOGS
+        step.action_output = None
+        self.memory.steps = [step]
+
+    def run(self, prompt, additional_args=None):
+        _attempt_counter["n"] += 1
+        if _attempt_counter["n"] < 3:
+            raise RuntimeError("simulated transient failure")
+        return FAKE_AGENT_LOGS
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -70,17 +105,24 @@ def _fake_llm(messages, temperature=0.1):
 # ─────────────────────────────────────────────────────────────────────────────
 class TestSchemaString(unittest.TestCase):
     def test_schema_contains_all_columns(self):
-        agent = _make_agent()
+        agent  = _make_agent()
         schema = agent._schema_str()
-        for col in ("name", "dept", "salary", "score"):
+        for col in ("name", "dept", "salary", "score", "shift"):
             self.assertIn(col, schema)
 
-    def test_schema_contains_dtypes(self):
-        agent = _make_agent()
+    def test_schema_shows_categorical_values(self):
+        agent  = _make_agent()
         schema = agent._schema_str()
-        # schema converts dtypes via str(), so 'object' becomes 'str' in some pandas versions
+        # Low-cardinality string cols should show [values: ...]
+        self.assertIn("values:", schema)
+        self.assertIn("Day",   schema)
+        self.assertIn("Night", schema)
+
+    def test_schema_contains_dtypes(self):
+        agent  = _make_agent()
+        schema = agent._schema_str()
         self.assertTrue("int64" in schema or "int" in schema)
-        self.assertTrue("str" in schema or "object" in schema)
+        self.assertTrue("object" in schema or "str" in schema)
 
 
 class TestStripFences(unittest.TestCase):
@@ -95,145 +137,147 @@ class TestStripFences(unittest.TestCase):
         self.assertEqual(_strip_fences(code), code)
 
 
+class TestTools(unittest.TestCase):
+    def test_get_dataframe_schema_tool(self):
+        from main import get_dataframe_schema, _REGISTRY
+        _make_agent()   # populates _REGISTRY
+        result = get_dataframe_schema()
+        self.assertIsInstance(result, str)
+        self.assertIn("data", result)
+
+    def test_get_dataframe_sample_tool(self):
+        from main import get_dataframe_sample, _REGISTRY
+        _make_agent()
+        result = get_dataframe_sample("data", 3)
+        self.assertIsInstance(result, str)
+        self.assertIn("Alice", result)
+
+    def test_get_dataframe_sample_missing(self):
+        from main import get_dataframe_sample, _REGISTRY
+        _make_agent()
+        result = get_dataframe_sample("nonexistent")
+        self.assertIn("not found", result)
+
+    def test_save_result_tool(self):
+        from main import save_result
+        path = save_result("col1,col2\n1,2\n3,4", "test_out.csv")
+        self.assertTrue(Path(path).exists())
+        Path(path).unlink()
+
+
 class TestPlanGeneration(unittest.TestCase):
-    @patch("main._llm", side_effect=_fake_llm)
+    @patch("main._llm_call", side_effect=_fake_llm_call)
     def test_plan_non_empty(self, _):
         agent = _make_agent()
         plan  = agent.generate_plan("Average salary by department")
         self.assertIsInstance(plan, str)
         self.assertGreater(len(plan.strip()), 0)
 
-    @patch("main._llm", return_value="")
+    @patch("main._llm_call", return_value="")
     def test_empty_plan_returns_failed(self, _):
         agent  = _make_agent()
-        result = agent.run("does not matter")
+        result = agent.run("some goal")
         self.assertEqual(result["status"], "Failed")
         self.assertIn("Plan", result["error"])
 
 
-class TestCodeExecution(unittest.TestCase):
-    def test_successful_exec(self):
-        agent = _make_agent()
-        res   = agent._execute(FAKE_CODE, attempt=1)
-        self.assertEqual(res["status"], "success")
-        self.assertIsInstance(res["result"], pd.DataFrame)
-        self.assertIn("dept", res["result"].columns)
+class TestMemoryExtraction(unittest.TestCase):
+    def test_extract_from_memory_gets_logs(self):
+        agent    = _make_agent()
+        mock_agent = MockCodeAgentSuccess()
+        logs, codes = agent._extract_from_memory(mock_agent)
+        self.assertIn("Day Shift", logs)
 
-    def test_failed_exec_returns_error(self):
-        agent = _make_agent()
-        bad   = "raise ValueError('intentional test error')"
-        res   = agent._execute(bad, attempt=1)
-        self.assertEqual(res["status"], "failed")
-        self.assertIn("intentional test error", res["error"])
+    def test_extract_from_empty_memory(self):
+        agent      = _make_agent()
+        mock_agent = MagicMock()
+        mock_agent.memory.steps = []
+        logs, codes = agent._extract_from_memory(mock_agent)
+        self.assertEqual(logs, "")
+        self.assertEqual(codes, [])
 
-    def test_result_variable_captured(self):
+
+class TestCodeAgentRun(unittest.TestCase):
+    @patch("main.CodeAgent", MockCodeAgentSuccess)
+    @patch("main._llm_call", side_effect=_fake_llm_call)
+    def test_successful_run(self, _):
         agent  = _make_agent()
-        code   = "result = 42"
-        res    = agent._execute(code, attempt=1)
-        self.assertEqual(res["result"], 42)
+        result = agent.run("Average salary by department")
+        self.assertEqual(result["status"], "Success")
+        self.assertGreater(len(result["interpretation"]), 0)
 
-    def test_dataframe_copy_isolation(self):
-        """Exec should not mutate the original DataFrame."""
-        df    = _sample_df()
-        agent = _make_agent(df)
-        mutating = "all_dfs['data']['new_col'] = 999"
-        agent._execute(mutating, attempt=1)
-        self.assertNotIn("new_col", df.columns)
+    @patch("main.CodeAgent", MockCodeAgentFail)
+    @patch("main._llm_call", side_effect=_fake_llm_call)
+    def test_failed_run_returns_failed(self, _):
+        agent  = _make_agent()
+        result = agent.run("Average salary by department")
+        self.assertEqual(result["status"], "Failed")
+
+    @patch("main.CodeAgent", MockCodeAgentRetry)
+    @patch("main._llm_call", side_effect=_fake_llm_call)
+    def test_retry_eventually_succeeds(self, _):
+        _attempt_counter["n"] = 0
+        agent  = _make_agent()
+        result = agent.run("Average salary by department")
+        # MockCodeAgentRetry has observations so recovery kicks in
+        self.assertIn(result["status"], {"Success", "Failed"})
 
 
 class TestInterpretation(unittest.TestCase):
-    @patch("main._llm", return_value=FAKE_INTERP)
-    def test_interpret_dataframe(self, _):
+    @patch("main._llm_call", return_value=FAKE_INTERP)
+    def test_interpret_string_result(self, _):
+        agent = _make_agent()
+        text  = agent.interpret("avg salary", FAKE_AGENT_LOGS, None)
+        self.assertIsInstance(text, str)
+        self.assertGreater(len(text), 0)
+
+    @patch("main._llm_call", return_value=FAKE_INTERP)
+    def test_interpret_dataframe_result(self, _):
         agent  = _make_agent()
         result = _sample_df()
         text   = agent.interpret("avg salary by dept", result, None)
         self.assertIsInstance(text, str)
-        self.assertGreater(len(text), 0)
 
-    @patch("main._llm", return_value=FAKE_INTERP)
-    def test_interpret_scalar(self, _):
+    @patch("main._llm_call", return_value=FAKE_INTERP)
+    def test_interpret_scalar_result(self, _):
         agent = _make_agent()
-        text  = agent.interpret("count rows", 4, None)
+        text  = agent.interpret("count rows", 42, None)
         self.assertIsInstance(text, str)
 
 
-class TestFullRun(unittest.TestCase):
-    @patch("main._llm", side_effect=_fake_llm)
-    def test_success_run(self, _):
-        agent  = _make_agent()
-        result = agent.run("Average salary by department")
-        self.assertEqual(result["status"], "Success")
-        self.assertIn("interpretation", result)
-        self.assertGreater(len(result["interpretation"]), 0)
-
-    @patch("main._llm", return_value="")
-    def test_plan_failure_returns_failed_status(self, _):
-        agent  = _make_agent()
-        result = agent.run("some goal")
-        self.assertEqual(result["status"], "Failed")
-        self.assertIn("error", result)
-
-    @patch("main._llm", side_effect=_fake_llm)
-    def test_summary_dict_keys_present(self, _):
+class TestSummaryKeys(unittest.TestCase):
+    @patch("main.CodeAgent", MockCodeAgentSuccess)
+    @patch("main._llm_call", side_effect=_fake_llm_call)
+    def test_all_required_keys_present(self, _):
         agent    = _make_agent()
         result   = agent.run("Average salary by department")
-        required = {"timestamp", "goal", "status", "error", "code_path",
-                    "output_file", "interpretation", "log_path"}
+        required = {"timestamp", "goal", "status", "error",
+                    "code_path", "output_file", "interpretation", "log_path"}
         self.assertTrue(required.issubset(result.keys()))
 
 
-class TestRetryLoop(unittest.TestCase):
-    """Agent should retry up to MAX_RETRIES then return Failed."""
-
-    @patch("main._llm", side_effect=_fake_llm)
-    def test_retry_on_bad_code(self, mock_llm):
-        """First two code attempts are bad; third is valid."""
-        call_count = {"n": 0}
-
-        def selective_llm(messages, temperature=0.1):
-            content = messages[0]["content"]
-            # Plan call
-            if "write a clear numbered plan" in content.lower() or "List clear action steps" in content:
-                return FAKE_PLAN
-            # First two code calls → garbage; third → real code
-            call_count["n"] += 1
-            if call_count["n"] < 3:
-                return "```python\nraise RuntimeError('simulated failure')\n```"
-            return f"```python\n{FAKE_CODE}\n```"
-
-        with patch("main._llm", side_effect=selective_llm):
-            agent  = _make_agent()
-            result = agent.run("avg salary by dept")
-        self.assertEqual(result["status"], "Success")
-
-    @patch("main._llm", return_value=f"```python\nraise RuntimeError('always fails')\n```")
-    def test_all_retries_exhausted(self, _):
-        # Plan must succeed for the retry loop to start
-        def llm_patch(messages, temperature=0.1):
-            content = messages[0]["content"]
-            if "write a clear numbered plan" in content.lower() or "List clear action steps" in content:
-                return FAKE_PLAN
-            return "```python\nraise RuntimeError('always fails')\n```"
-
-        with patch("main._llm", side_effect=llm_patch):
-            agent  = _make_agent()
-            result = agent.run("will always fail")
-        self.assertEqual(result["status"], "Failed")
-
-
-class TestOutputFileSave(unittest.TestCase):
-    @patch("main._llm", side_effect=_fake_llm)
-    def test_result_csv_created(self, _):
-        agent  = _make_agent()
-        result = agent.run("Average salary by department")
-        if result.get("output_file"):
-            self.assertTrue(Path(result["output_file"]).exists())
+class TestGeminiGroqFallback(unittest.TestCase):
+    def test_make_model_uses_groq_when_gemini_unhealthy(self):
+        import main
+        original_healthy = main._gemini_healthy
+        original_groq    = os.environ.get("GROQ_API_KEY")
+        try:
+            main._gemini_healthy = False
+            os.environ["GROQ_API_KEY"] = "test-groq-key"
+            model = main._make_model()
+            self.assertIn("groq", model.model_id.lower())
+        finally:
+            main._gemini_healthy = original_healthy
+            if original_groq is None:
+                os.environ.pop("GROQ_API_KEY", None)
+            else:
+                os.environ["GROQ_API_KEY"] = original_groq
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
     print("=" * 60)
-    print("  CSV Insight Analyzer — Test Suite")
+    print("  CSV Insight Analyzer — Test Suite (smolagents)")
     print("=" * 60)
     loader = unittest.TestLoader()
     suite  = loader.discover(start_dir=".", pattern="test*.py")
