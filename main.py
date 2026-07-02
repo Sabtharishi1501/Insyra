@@ -84,7 +84,6 @@ def _make_model() -> LiteLLMModel:
             api_key=GROQ_API_KEY,
             temperature=TEMPERATURE,
         )
-    # Last resort – Gemini even if unhealthy
     return LiteLLMModel(
         model_id=GEMINI_MODEL,
         api_key=GEMINI_API_KEY,
@@ -131,9 +130,7 @@ def _append_summary(data: dict):
 
 
 # ── smolagents tools ──────────────────────────────────────────────────────────
-# These are registered on the CodeAgent so it can call them during its loop.
-
-_REGISTRY: Dict[str, pd.DataFrame] = {}   # populated per-run
+_REGISTRY: Dict[str, pd.DataFrame] = {} 
 
 @tool
 def get_dataframe_schema() -> str:
@@ -283,7 +280,6 @@ class DataAnalysisAgent:
         goal_lower = goal.lower()
         has_tabular = any(k in goal_lower for k in tabular_keywords)
         has_scalar  = any(k in goal_lower for k in scalar_keywords)
-        # If both, tabular wins (e.g. "how many + top 10")
         return has_tabular
 
     def _build_agent_prompt(self, goal: str, plan: str) -> str:
@@ -333,8 +329,6 @@ RULES:
         if not (hasattr(agent, "memory") and agent.memory.steps):
             return "", []
         for step in agent.memory.steps:
-            # Collect code blocks (tool_calls may be None if the step errored
-            # before any tool call was generated, e.g. a model/network failure)
             tool_calls = getattr(step, "tool_calls", None)
             if tool_calls:
                 for tc in tool_calls:
@@ -342,12 +336,10 @@ RULES:
                     code = args.get("code", "") if isinstance(args, dict) else str(args)
                     if code:
                         codes.append(code)
-            # Collect execution output (printed results)
             if hasattr(step, "observations"):
                 obs = step.observations or ""
                 if obs:
                     logs.append(str(obs))
-            # Also grab step output (use is not None — output may be a DataFrame)
             action_out = getattr(step, "action_output", None)
             if action_out is not None:
                 try:
@@ -375,7 +367,7 @@ RULES:
             "matplotlib", "seaborn", "datetime", "re",
         ]
 
-        AGENT_TIMEOUT_SECONDS = 60   # hard ceiling per attempt
+        AGENT_TIMEOUT_SECONDS = 60
 
         for attempt in range(1, MAX_RETRIES + 1):
             self._log(f"\n─── CodeAgent Attempt {attempt}/{MAX_RETRIES} ───")
