@@ -188,21 +188,16 @@ st.markdown("""
 for key, val in {
     "all_dfs":            {},
     "metadata":           {},
-    "file_names":         {},       # maps df key -> original uploaded filename
-    "history":            [],       # list of result dicts
+    "file_names":         {},      
+    "history":            [],       
     "agent":              None,
     "api_ok":             False,
-    "goal_input_value":   "",       # bound to the question text_area
-    "clear_goal_pending": False,    # set True after a run; consumed BEFORE the widget renders
+    "goal_input_value":   "",       
+    "clear_goal_pending": False,    
 }.items():
     if key not in st.session_state:
         st.session_state[key] = val
 
-# Streamlit forbids writing to a widget-bound session_state key after that
-# widget has already been instantiated in the script. So instead of clearing
-# goal_input_value right after agent.run() (too late — the widget already
-# rendered earlier in that same run), we set a flag there and consume it here,
-# BEFORE st.text_area(key="goal_input_value") is created below.
 if st.session_state.clear_goal_pending:
     st.session_state.goal_input_value = ""
     st.session_state.clear_goal_pending = False
@@ -246,9 +241,8 @@ with st.sidebar:
 
     # ── Track up to 3 individual file slots ───────────────────────────────────
     if "csv_slots" not in st.session_state:
-        st.session_state.csv_slots = [None, None, None]   # each holds an UploadedFile or None
-    if "uploader_gen" not in st.session_state:
-        st.session_state.uploader_gen = 0   # bump this to force a fresh uploader widget
+        st.session_state.csv_slots = [None, None, None]  
+        st.session_state.uploader_gen = 0   
 
     n_filled = sum(1 for s in st.session_state.csv_slots if s is not None)
 
@@ -267,7 +261,7 @@ with st.sidebar:
         )
         if new_file is not None:
             st.session_state.csv_slots[n_filled] = new_file
-            st.session_state.uploader_gen += 1   # force fresh widget on next rerun
+            st.session_state.uploader_gen += 1   
             st.rerun()
 
     # ── Rebuild all_dfs from filled slots whenever slots change ───────────────
@@ -277,7 +271,7 @@ with st.sidebar:
         read_error = None
         for i, f in enumerate(filled_files):
             key = "data" if i == 0 else f"data{i+1}"
-            f.seek(0)   # UploadedFile keeps its stream position across reruns — reset before reading
+            f.seek(0)   
             try:
                 df = pd.read_csv(f)
             except pd.errors.EmptyDataError:
@@ -290,7 +284,6 @@ with st.sidebar:
         if read_error:
             st.error(read_error)
         else:
-            # Always persist file_names so the agent always knows actual filenames
             st.session_state.file_names = new_names
             if set(new_dfs.keys()) != set(st.session_state.all_dfs.keys()):
                 st.session_state.all_dfs  = new_dfs
@@ -318,10 +311,9 @@ with st.sidebar:
             with btn_col:
                 if st.button("✕", key=f"remove_slot_{i}", type="primary"):
                     st.session_state.csv_slots[i] = None
-                    # Compact remaining slots so there's no gap
                     remaining = [s for s in st.session_state.csv_slots if s is not None]
                     st.session_state.csv_slots = remaining + [None] * (3 - len(remaining))
-                    st.session_state.uploader_gen += 1   # ensure a fresh uploader widget
+                    st.session_state.uploader_gen += 1   
                     st.rerun()
     else:
         st.caption("No files loaded yet.")
@@ -394,8 +386,6 @@ if st.session_state.all_dfs:
             starter_clicked = starter
 
     # ── Run analysis ──────────────────────────────────────────────────────────
-    # A starter button click runs immediately with its own text, bypassing
-    # whatever (if anything) is currently typed in the box.
     run_goal = starter_clicked if starter_clicked else (goal.strip() if run_btn else None)
 
     if run_goal:
@@ -406,7 +396,7 @@ if st.session_state.all_dfs:
                 agent  = get_agent()
                 result = agent.run(run_goal)
                 st.session_state.history.insert(0, result)
-                st.session_state.clear_goal_pending = True   # consumed before the widget renders next run
+                st.session_state.clear_goal_pending = True 
                 st.rerun()
 
     st.markdown("---")
@@ -434,12 +424,10 @@ if st.session_state.all_dfs:
                         unsafe_allow_html=True,
                     )
 
-                    # ── Output file (only show if result is a real table) ──────
                     if res.get("output_file") and Path(res["output_file"]).exists():
                         out_path = Path(res["output_file"])
                         if out_path.suffix == ".csv":
                             out_df = pd.read_csv(out_path)
-                            # Only render table if it has multiple rows (real tabular data)
                             if len(out_df) > 1:
                                 st.markdown("**Output table** (`result.csv`)")
                                 st.dataframe(out_df, use_container_width=True)
