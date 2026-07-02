@@ -202,10 +202,12 @@ class DataAnalysisAgent:
     Stage 3 – InterpretAgent: LiteLLMModel → plain-English insight from results
     """
 
-    def __init__(self, all_dfs: Dict[str, pd.DataFrame], metadata: Dict[str, dict]):
-        self.all_dfs  = all_dfs
-        self.metadata = metadata
-        self._ts      = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    def __init__(self, all_dfs: Dict[str, pd.DataFrame], metadata: Dict[str, dict],
+                 file_names: Dict[str, str] = None):
+        self.all_dfs    = all_dfs
+        self.metadata   = metadata
+        self.file_names = file_names or {}   # {df_key: original_filename}
+        self._ts        = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
         self._log_path = LOG_DIR / f"log_{self._ts}.txt"
         self._log_fh   = open(self._log_path, "w", encoding="utf-8")
 
@@ -545,9 +547,55 @@ RULES:
         is_compound = any(w in g for w in [" and ", " also ", " plus ", "top ", "list ", "show "])
         return is_simple and not is_compound
 
-    # ─────────────────────────────────────────────────────────────────────────
-    # Orchestrator
-    # ─────────────────────────────────────────────────────────────────────────
+    def _is_describe_question(self, goal: str) -> bool:
+        """Questions asking what the data is — answered from schema, no agent needed."""
+        g = goal.lower().strip()
+        describe_patterns = [
+            "what is this data", "what are the data", "what data",
+            "describe the data", "tell me about the data", "what is in this",
+            "what columns", "show me the columns", "what are the columns",
+            "what files", "what did you get", "what have i given",
+            "overview of the data", "summarize the data", "data summary",
+            "what did i give", "which data", "what are the files",
+            "which files", "what have you got", "what is the data",
+            "describe this", "give me an overview", "what information",
+            "what are these", "tell me about these", "summarise the data",
+        ]
+        return any(p in g for p in describe_patterns)
+
+    def _answer_describe(self, goal: str) -> dict:
+        """Directly answer what files/data were uploaded — fast, no agent needed."""
+        summary = {
+            "timestamp":      self._ts,
+            "goal":           goal,
+            "status":         "Success",
+            "error":          "",
+            "code_path":      "",
+            "output_file":    "",
+            "interpretation": "",
+            "log_path":       str(self._log_path),
+        }
+        n_files = len(self.all_dfs)
+        parts   = [f"You have uploaded {n_files} file{'s' if n_files > 1 else ''}:\n\n"]
+        for name, df in self.all_dfs.items():
+            fname = self.file_names.get(name, name)
+            parts.append(f"**{fname}**\n")
+            parts.append(f"- {len(df):,} rows and {len(df.columns)} columns\n")
+            parts.append(f"- Columns: {', '.join(df.columns.tolist())}\n")
+            sample_info = []
+            for col in df.columns:
+                dtype = str(df[col].dtype)
+                n_unique = df[col].nunique()
+                if dtype in ("object", "str") and n_unique <= 15:
+                    vals = df[col].dropna().unique().tolist()[:8]
+                    sample_info.append(f"`{col}`: {vals}")
+            if sample_info:
+                parts.append("- Notable categories:\n  " + "\n  ".join(sample_info) + "\n")
+            parts.append("\n")
+        summary["interpretation"] = "".join(parts)
+        _append_summary(summary)
+        return summary
+
     def run(self, goal: str) -> dict:
         summary = {
             "timestamp":      self._ts,
@@ -559,6 +607,16 @@ RULES:
             "interpretation": "",
             "log_path":       str(self._log_path),
         }
+
+        # ── Clear stale result.csv from previous runs so the agent can't read old data ──
+        stale = OUTPUT_DIR / "result.csv"
+        if stale.exists():
+            stale.unlink()
+
+        # ── Shortcut: "what is this data?" → answer directly from schema ──────
+        if self._is_describe_question(goal):
+            self._log("📋 Describe question detected — answering from schema.")
+            return self._answer_describe(goal)
 
         # Stage 1 – Plan (skip for simple scalar questions to save time)
         if self._is_simple_question(goal):

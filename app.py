@@ -215,7 +215,14 @@ def get_agent():
         return None
     if not st.session_state.all_dfs:
         return None
-    return DataAnalysisAgent(st.session_state.all_dfs, st.session_state.metadata)
+    # Inject original filenames into metadata so describe questions show real names
+    meta = dict(st.session_state.metadata)
+    meta["__filenames__"] = st.session_state.file_names
+    return DataAnalysisAgent(
+        st.session_state.all_dfs,
+        meta,
+        file_names=st.session_state.get("file_names", {}),
+    )
 
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
@@ -282,12 +289,14 @@ with st.sidebar:
 
         if read_error:
             st.error(read_error)
-        elif set(new_dfs.keys()) != set(st.session_state.all_dfs.keys()):
-            st.session_state.all_dfs    = new_dfs
-            st.session_state.metadata   = new_meta
+        else:
+            # Always persist file_names so the agent always knows actual filenames
             st.session_state.file_names = new_names
-            st.session_state.history    = []
-            st.session_state.agent      = None
+            if set(new_dfs.keys()) != set(st.session_state.all_dfs.keys()):
+                st.session_state.all_dfs  = new_dfs
+                st.session_state.metadata = new_meta
+                st.session_state.history  = []
+                st.session_state.agent    = None
 
     st.markdown("---")
     st.markdown("### 📊 Loaded DataFrames")
@@ -317,14 +326,17 @@ with st.sidebar:
     else:
         st.caption("No files loaded yet.")
 
-    st.markdown("---")
-    if st.button("🗑 Clear history"):
-        st.session_state.history = []
-        st.rerun()
-
 
 # ── Main layout ───────────────────────────────────────────────────────────────
-st.markdown("# Insyra")
+title_col, clear_col = st.columns([8, 2])
+with title_col:
+    st.markdown("# Insyra")
+with clear_col:
+    st.markdown("<br>", unsafe_allow_html=True)
+    if st.session_state.history:
+        if st.button("🗑 Clear history", key="clear_history_top", use_container_width=True):
+            st.session_state.history = []
+            st.rerun()
 st.markdown("---")
 
 # ── Data preview ─────────────────────────────────────────────────────────────
